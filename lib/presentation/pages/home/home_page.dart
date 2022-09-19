@@ -16,7 +16,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final controller = TextEditingController();
 
-  void search() => context.read<HomeBloc>().add(HomeSearch(controller.text));
+  //TODO:
+  void search() => context.read<HomeBloc>().add(HomeSearch('Лампа'));
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,6 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey,
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
-          print(state);
           if (state is HomeLoading) {
             return const Loader();
           }
