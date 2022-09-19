@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rospatent/presentation/providers/style.dart';
 
 import 'injection.dart' as di;
 import 'injection.dart';
@@ -23,8 +24,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rospatent',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            color: Colors.transparent,
+            iconTheme: IconThemeData(color: Style.secondary),
+          ),
+          iconTheme: const IconThemeData(color: Style.secondary)),
       home: BlocProvider<HomeBloc>(
         create: (_) => sl<HomeBloc>(),
         child: const HomePage(),
