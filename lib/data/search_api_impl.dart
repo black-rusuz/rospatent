@@ -8,8 +8,10 @@ import 'package:injectable/injectable.dart';
 import '../domain/search_api.dart';
 import 'model/search_response.dart';
 
+// TODO: это тоже нахуй, но можно ебануть ещё один env
 const bool debugMode = true;
 
+// TODO: нахуй оно тут?
 class Print {
   static void json(Object? json) {
     const JsonEncoder encoder = JsonEncoder.withIndent('  ');
