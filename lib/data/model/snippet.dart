@@ -4,7 +4,7 @@ class Snippet {
   final String lang;
   final String applicant;
   final String inventor;
-  final List classification;
+  final classification;
 
   Snippet({
     required this.title,
@@ -20,7 +20,7 @@ class Snippet {
       title: json['title'],
       description: json['description'],
       lang: json['lang'],
-      applicant: json['applicant'],
+      applicant: json['applicant'] ?? '',
       inventor: json['inventor'],
       classification: json['classification'],
     );

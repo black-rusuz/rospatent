@@ -1,8 +1,9 @@
+import 'meta_source.dart';
 import 'snippet.dart';
 
 class Hit {
   final common;
-  final meta;
+  final MetaSource meta;
   final biblio;
   final String id;
   final String index;
@@ -26,7 +27,7 @@ class Hit {
   factory Hit.fromJson(Map<String, dynamic> json) {
     return Hit(
       common: json['common'],
-      meta: json['meta'],
+      meta: MetaSource.fromJson(json['meta']),
       biblio: json['biblio'],
       id: json['id'],
       index: json['index'],
