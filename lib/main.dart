@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'injection.dart' as di;
-import 'presentation/home_page.dart';
+import 'injection.dart';
+import 'presentation/pages/home/bloc/home_bloc.dart';
+import 'presentation/pages/home/home_page.dart';
 
 void setupApp() {
   di.configureDependencies();
@@ -22,7 +25,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: BlocProvider<HomeBloc>(
+        create: (_) => sl<HomeBloc>(),
+        child: const HomePage(),
+      ),
     );
   }
 }
