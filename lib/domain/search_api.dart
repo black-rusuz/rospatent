@@ -1,5 +1,7 @@
+import '../data/model/search_response.dart';
+
 abstract class SearchApi {
   abstract final String url;
 
-  Future<void> search(String pattern);
+  Future<SearchResponse> search(String pattern);
 }

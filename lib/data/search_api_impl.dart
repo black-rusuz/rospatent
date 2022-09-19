@@ -9,7 +9,7 @@ import '../domain/search_api.dart';
 import 'model/search_response.dart';
 
 // TODO: это тоже нахуй, но можно ебануть ещё один env
-const bool debugMode = true;
+const bool debugMode = false;
 
 // TODO: нахуй оно тут?
 class Print {
@@ -39,7 +39,7 @@ class SearchApiImpl implements SearchApi {
   }
 
   @override
-  Future<void> search(String pattern) async {
+  Future<SearchResponse> search(String pattern) async {
     final timer = Stopwatch()..start();
     late final data;
     if (!debugMode) {
@@ -53,5 +53,6 @@ class SearchApiImpl implements SearchApi {
     //Print.json(data);
     final model = SearchResponse.fromJson(data);
     debugPrint('LOAD TIME: ${timer.elapsed}');
+    return model;
   }
 }

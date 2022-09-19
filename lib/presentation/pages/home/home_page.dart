@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../widgets/base_text_field.dart';
 import '../../widgets/loader.dart';
+import '../../widgets/search_results.dart';
 import 'bloc/home_bloc.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,7 +28,9 @@ class _HomePageState extends State<HomePage> {
           if (state is HomeLoading) {
             return const Loader();
           }
-          if (state is HomeResults) {}
+          if (state is HomeResults) {
+            return SearchResults(results: state.results);
+          }
           return Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
