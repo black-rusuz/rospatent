@@ -1,7 +1,19 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 
 import '../domain/search_api.dart';
+import 'model/search_response.dart';
+
+class Print {
+  static void json(Object? json) {
+    const JsonEncoder encoder = JsonEncoder.withIndent('  ');
+    final String output = encoder.convert(json);
+    debugPrint(output);
+  }
+}
 
 @Singleton(as: SearchApi)
 class SearchApiImpl implements SearchApi {
@@ -24,5 +36,8 @@ class SearchApiImpl implements SearchApi {
   @override
   Future<void> search(String data) async {
     final response = await client.post('$url/search', data: {'q': data});
+    print(response.statusCode);
+    Print.json(response.data);
+    final model = SearchResponse.fromJson(response.data);
   }
 }
