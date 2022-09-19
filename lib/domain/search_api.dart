@@ -1,5 +1,5 @@
 abstract class SearchApi {
   abstract final String url;
 
-  Future<void> search(String data);
+  Future<void> search(String pattern);
 }

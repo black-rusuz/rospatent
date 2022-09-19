@@ -1,0 +1,1616 @@
+{
+  "total": 10538,
+  "available": 1000,
+  "hits": [
+    {
+      "common": {
+        "publishing_office": "UA",
+        "document_number": "0000028083",
+        "kind": "C2",
+        "publication_date": "2000.10.16",
+        "application": {
+          "number": "97062738",
+          "filing_date": "1997.06.10",
+          "rights_start_date": "2000.10.16"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "9",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "K",
+              "section": "F",
+              "fullname": "F02K9/00",
+              "class": "02"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/CIS_2009/UA/C2/20001016/0000028083",
+          "file": "0000028083.xml",
+          "index": "CIS_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "inventor": [
+            {
+              "name": "Емельяненко Юрий Петрович (UA)"
+            }
+          ],
+          "title": "РАКЕТА СО СТАБИЛИЗАТОРОМ В СОПЛЕ",
+          "patentee": [
+            {
+              "name": "Омельяненко Юрий Петрович (UA)"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "Омельяненко Юрий Петрович (UA)"
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Omelianenko Yurii Petrovych (UA)"
+            }
+          ],
+          "title": "ROCKET WITH STABILIZATION IN NOZZLE",
+          "patentee": [
+            {
+              "name": "Omelianenko Yurii Petrovych (UA)"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "Omelianenko Yurii Petrovych (UA)"
+            }
+          ]
+        },
+        "uk": {
+          "inventor": [
+            {
+              "name": "*, Омеляненко Юрій Петрович (UA)"
+            }
+          ],
+          "title": "РАКЕТА З СТАБІЛІЗАТОРОМ В СОПЛІ",
+          "patentee": [
+            {
+              "name": "Омеляненко Юрій Петрович (UA)"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "Омеляненко Юрій Петрович (UA)"
+            }
+          ]
+        }
+      },
+      "id": "UA0000028083C2_20001016",
+      "index": "jun_cis_2009",
+      "dataset": "cis",
+      "similarity": 89.88599,
+      "similarity_norm": 0.9889972040795286,
+      "snippet": {
+        "title": "<em>РАКЕТА</em> СО СТАБИЛИЗАТОРОМ В СОПЛЕ",
+        "description": "Недостатком <em>ракеты</em> является расположение перьев стабилизатора, до ее старта, внутри и снаружи корпуса с продольными пазами, который находится в задней стороне от реактивного двигателя, а перья входят в пазы, соединяются между собой внутри корпуса и в их задней части, выполнены подвижными в радиальном направлении. В полете <em>ракеты</em> перья стабилизатора давлением газа из сопла выжимаются наружу, в боковые стороны от корпуса. Поэтому в полете <em>ракета</em> имеет выдвинутый в стороны стабилизатор. Кроме того, сопло такой <em>ракеты</em> выполнено дозвуковым. Это увеличивает габаритные размеры <em>ракеты</em> и сопротивление ее движения, не позволяет улучшить стабилизацию и точность полета, особенно в момент старта и разгона <em>ракеты</em>.",
+        "lang": "ru",
+        "applicant": "Омельяненко Юрий Петрович (UA)",
+        "inventor": "Емельяненко Юрий Петрович (UA)",
+        "patentee": "Омельяненко Юрий Петрович (UA)",
+        "classification": {
+          "ipc": "F02K9/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "EA",
+        "document_number": "0000018694",
+        "kind": "B1",
+        "publication_date": "2013.09.30",
+        "priority": {
+          "number": "2009146155",
+          "country": "RU",
+          "filing_date": "2009.12.15"
+        },
+        "application": {
+          "number": "201100058",
+          "filing_date": "2011.01.18"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            },
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "10",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/10",
+              "class": "42"
+            },
+            {
+              "main_group": "9",
+              "classification_value": "invention",
+              "subgroup": "42",
+              "subclass": "K",
+              "section": "F",
+              "fullname": "F02K9/42",
+              "class": "02"
+            },
+            {
+              "main_group": "9",
+              "classification_value": "invention",
+              "subgroup": "62",
+              "subclass": "K",
+              "section": "F",
+              "fullname": "F02K9/62",
+              "class": "02"
+            },
+            {
+              "main_group": "27",
+              "classification_value": "invention",
+              "subgroup": "04",
+              "subclass": "M",
+              "section": "F",
+              "fullname": "F02M27/04",
+              "class": "02"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/CIS_2009/EA/B1/20130930/0000018694",
+          "file": "0000018694.xml",
+          "index": "CIS_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "RU-C1-2341762 RU-C1-2191986 JP-A-2003139500 US-B1-6276277 GB-A1-982767",
+          "inventor": [
+            {
+              "name": "Звонов Александр Александрович (RU)"
+            },
+            {
+              "name": "Матвеев Владимир Анатольевич (RU)"
+            }
+          ],
+          "title": "ЗЕНИТНАЯ УПРАВЛЯЕМАЯ РАКЕТА",
+          "patentee": [
+            {
+              "name": "ЗВОНОВ АЛЕКСАНДР АЛЕКСАНДРОВИЧ (RU)"
+            },
+            {
+              "name": "МАТВЕЕВ ВЛАДИМИР АНАТОЛЬЕВИЧ (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "text": "RU-C1-2341762 RU-C1-2191986 JP-A-2003139500 US-B1-6276277 GB-A1-982767"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "ЗВОНОВ АЛЕКСАНДР АЛЕКСАНДРОВИЧ (RU)"
+            },
+            {
+              "name": "МАТВЕЕВ ВЛАДИМИР АНАТОЛЬЕВИЧ (RU)"
+            }
+          ]
+        },
+        "en": {
+          "citations": "RU-C1-2341762 RU-C1-2191986 JP-A-2003139500 US-B1-6276277 GB-A1-982767",
+          "inventor": [
+            {
+              "name": "ZVONOV Alexander, Alexandrovich (RU)"
+            },
+            {
+              "name": "MATVEEV Vladimir, Anatolievich (RU)"
+            }
+          ],
+          "title": "ANTIAIRCRAFT GUIDED MISSILE",
+          "patentee": [
+            {
+              "name": "ZVONOV ALEXANDER, ALEXANDROVICH (RU)"
+            },
+            {
+              "name": "MATVEEV VLADIMIR, ANATOLIEVICH (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "text": "RU-C1-2341762 RU-C1-2191986 JP-A-2003139500 US-B1-6276277 GB-A1-982767"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "ZVONOV ALEXANDER, ALEXANDROVICH (RU)"
+            },
+            {
+              "name": "MATVEEV VLADIMIR, ANATOLIEVICH (RU)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/CIS_2009/EA/B1/20130930/0000018694/00000003.TIF",
+          "width": "74",
+          "height": "100"
+        },
+        {
+          "url": "/media/CIS_2009/EA/B1/20130930/0000018694/00000004.TIF",
+          "width": "86",
+          "height": "82"
+        },
+        {
+          "url": "/media/CIS_2009/EA/B1/20130930/0000018694/00000005.TIF",
+          "width": "92",
+          "height": "55"
+        },
+        {
+          "url": "/media/CIS_2009/EA/B1/20130930/0000018694/00000006.TIF",
+          "width": "74",
+          "height": "32"
+        }
+      ],
+      "id": "EA0000018694B1_20130930",
+      "index": "jun_cis_2009",
+      "dataset": "cis",
+      "similarity": 85.35252,
+      "similarity_norm": 0.9884195620463653,
+      "snippet": {
+        "title": "ЗЕНИТНАЯ УПРАВЛЯЕМАЯ <em>РАКЕТА</em>",
+        "description": "Наиболее близкой по назначению и технической сущности из указанных ЗУР к заявляемому техническому решению является зенитная управляемая <em>ракета</em> (ЗУР) Великобритании \"Бландхаунд\" (\"Современная военная техника\". Под ред. К Бишопа, Пер. с англ., М.: Изд-во \"Астель-АСТ\", с. 181-182). Указанная ЗУР содержит корпус, внутри которого установлен маршевый реактивный двигатель, источник топлива для реактивного двигателя, боевая часть для поражения средств воздушного нападения, автопилот, бортовой источник электропитания и бортовая ЭВМ для управления бортовой аппаратурой и полетом <em>ракеты</em>, причем маршевый реактивный двигатель снабжен реактивным соплом и соединен по питающему входу с источником ракетного топлива, а по выходу продуктов сгорания ракетного топлива - с соплом <em>ракеты</em>. При этом на корпусе <em>ракеты</em> дополнительно установлены четыре твердотопливных ускорителя, маршевый реактивный двигатель, установленный в корпусе <em>ракеты</em>, выполнен в виде двух прямоточных воздушно-реактивных двигателей.",
+        "lang": "ru",
+        "applicant": "ЗВОНОВ АЛЕКСАНДР АЛЕКСАНДРОВИЧ (RU)",
+        "inventor": "Звонов Александр Александрович (RU)",
+        "patentee": "ЗВОНОВ АЛЕКСАНДР АЛЕКСАНДРОВИЧ (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "EA",
+        "document_number": "0000030668",
+        "kind": "B1",
+        "publication_date": "2018.09.28",
+        "application": {
+          "number": "201600178",
+          "filing_date": "2016.01.27"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "12",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/12",
+              "class": "42"
+            },
+            {
+              "main_group": "1",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "G",
+              "section": "B",
+              "fullname": "B64G1/00",
+              "class": "64"
+            },
+            {
+              "main_group": "1",
+              "classification_value": "invention",
+              "subgroup": "22",
+              "subclass": "G",
+              "section": "B",
+              "fullname": "B64G1/22",
+              "class": "64"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/CIS_2009/EA/B1/20180928/0000030668",
+          "file": "0000030668.xml",
+          "index": "CIS_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "RU-C2-2532321 ГРАБИН Б.В. и др. Основы конструирования ракет-носителей космических аппаратов. Москва, Машиностроение, 1991, с. 14-15 US-A-4131065",
+          "inventor": [
+            {
+              "name": "Степанян Ревик Артурович (BY)"
+            }
+          ],
+          "title": "МНОГОСТУПЕНЧАТАЯ РАКЕТА И СПОСОБ ЕЕ ЭКСПЛУАТАЦИИ",
+          "patentee": [
+            {
+              "name": "СТЕПАНЯН РЕВИК АРТУРОВИЧ (BY)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "text": "RU-C2-2532321 ГРАБИН Б.В. и др. Основы конструирования ракет-носителей космических аппаратов. Москва, Машиностроение, 1991, с. 14-15 US-A-4131065"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "СТЕПАНЯН РЕВИК АРТУРОВИЧ (BY)"
+            }
+          ]
+        },
+        "en": {
+          "citations": "RU-C2-2532321 GRABIN B.V. i dr. Osnovy konstruirovaniya raket-nositeley kosmicheskikh apparatov. Moskva, Mashinostroenie, 1991, s. 14-15 US-A-4131065",
+          "inventor": [
+            {
+              "name": "STEPANYAN Revik, Arturovich (BY)"
+            }
+          ],
+          "title": "MULTI-STAGE ROCKET AND METHOD FOR OPERATING THE SAME",
+          "patentee": [
+            {
+              "name": "STEPANYAN REVIK, ARTUROVICH (BY)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "text": "RU-C2-2532321 GRABIN B.V. i dr. Osnovy konstruirovaniya raket-nositeley kosmicheskikh apparatov. Moskva, Mashinostroenie, 1991, s. 14-15 US-A-4131065"
+            }
+          ],
+          "applicant": [
+            {
+              "name": "STEPANYAN REVIK, ARTUROVICH (BY)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/CIS_2009/EA/B1/20180928/0000030668/00000001.tif",
+          "width": "23",
+          "height": "111"
+        },
+        {
+          "url": "/media/CIS_2009/EA/B1/20180928/0000030668/00000002.tif",
+          "width": "41",
+          "height": "83"
+        },
+        {
+          "url": "/media/CIS_2009/EA/B1/20180928/0000030668/00000003.tif",
+          "width": "34",
+          "height": "128"
+        }
+      ],
+      "id": "EA0000030668B1_20180928",
+      "index": "jun_cis_2009",
+      "dataset": "cis",
+      "similarity": 83.89274,
+      "similarity_norm": 0.9882204296857423,
+      "snippet": {
+        "title": "МНОГОСТУПЕНЧАТАЯ <em>РАКЕТА</em> И СПОСОБ ЕЕ ЭКСПЛУАТАЦИИ",
+        "description": "Изобретение относится к ракетной технике, в частности к многоступенчатым <em>ракетам</em> и может быть использовано в ракетостроении. Известна тандемная многоступенчатая <em>ракета</em> с продольным разделением ступеней, содержащая корпус, ракетные двигатели, баки окислителя, баки горючего, межступенчатые отсеки, отсек для полезного груза и головной обтекатель. В <em>ракете</em> разгонные ступени продольно соединяются друг с другом посредством поперечных фланцевых стыков[1]. Однако конструкция этой <em>ракеты</em> имеет недостатки, заключающиеся в том, что воздействие трения воздуха происходит сразу на все ступени <em>ракеты</em>, что приводит к повышенному расходу топлива. А также наличие большой разницы диаметра <em>ракеты</em> по ходу ее продольной оси, приводит к дополнительным затратам на преодоление силы трения, сокращает сферу применения данной <em>ракеты</em>.",
+        "lang": "ru",
+        "applicant": "СТЕПАНЯН РЕВИК АРТУРОВИЧ (BY)",
+        "inventor": "Степанян Ревик Артурович (BY)",
+        "patentee": "СТЕПАНЯН РЕВИК АРТУРОВИЧ (BY)",
+        "classification": {
+          "ipc": "F42B15/12"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2590760",
+        "kind": "C2",
+        "publication_date": "2016.07.10",
+        "application": {
+          "number": "2014131398/11",
+          "filing_date": "2014.07.29",
+          "rights_start_date": "2014.07.29"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "11",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "H",
+              "section": "F",
+              "fullname": "F41H11/00",
+              "class": "41"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C2/20160710/0002590760",
+          "file": "0002590760.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "US 4568040 A1, 04.02.1986. GB 2430994 A, 11.04.2007. Интернет-статья П-500 Базальт - SS-N-12 SANDBOX, 27.05.2013. Найдено в интернет <URL: http://militaryrussia.ru/blog/topic-387.html>. Оружие России. 2004. Москва. Издательство \"Военной Парад\". 2004. стр. 449-456. RU 2484418 C1, 10.06.2013. Локк А.С. Основы проектирования управляемых снарядов. Управление снарядами. Москва. Государственное издательство технико-теоретической литературы. 1957. стр. 580-603. NDIA 49th Annual Fuze Conference 5-7 April, 2005. Development of the XM982 Excalibur Fuzing System. US 7185846 B1, 06.03.2007. Интернет-статья AGM-129A ADVANCED CRUISE MISSILE, опубл. 17.01.2011. Найдено в Интернет <URL: archive.is/20120716102842/http://www.af.mil/information/factsheets/factsheet.asp?id=3548>. RU 2522342 C1, 10.07.2014. RU 2492413 C1, 10.09.2013. RU 2034232 C1, 30.04.1995. RU 2483273 C1, 27.05.2013. RU 2102686 C1, 20.01.1998. RU 2303229 C1, 20.07.2007.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "РАКЕТА И СПОСОБ ЕЁ РАБОТЫ",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "doc": {
+                "document_number": "4568040",
+                "kind": "A1",
+                "identity": "US4568040A1",
+                "publication_date": "1986.02.04",
+                "id": "US4568040A1_19860204",
+                "publishing_office": "US"
+              },
+              "text": "US 4568040 A1, 04.02.1986."
+            },
+            {
+              "doc": {
+                "document_number": "2430994",
+                "kind": "A",
+                "identity": "GB2430994A",
+                "publication_date": "2007.04.11",
+                "id": "GB2430994A_20070411",
+                "publishing_office": "GB"
+              },
+              "text": "GB 2430994 A, 11.04.2007."
+            },
+            {
+              "text": "Интернет-статья П-500 Базальт - SS-N-12 SANDBOX, 27.05.2013. Найдено в интернет <URL: http://militaryrussia.ru/blog/topic-387.html>. Оружие России. 2004. Москва. Издательство \"Военной Парад\". 2004. стр. 449-456."
+            },
+            {
+              "doc": {
+                "document_number": "2484418",
+                "kind": "C1",
+                "identity": "RU2484418C1",
+                "publication_date": "2013.06.10",
+                "id": "RU2484418C1_20130610",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2484418 C1, 10.06.2013."
+            },
+            {
+              "text": "Локк А.С. Основы проектирования управляемых снарядов. Управление снарядами. Москва. Государственное издательство технико-теоретической литературы. 1957. стр. 580-603. NDIA 49th Annual FuzeConference 5-7 April, 2005. Development of the XM982 Excalibur Fuzing System."
+            },
+            {
+              "doc": {
+                "document_number": "7185846",
+                "kind": "B1",
+                "identity": "US7185846B1",
+                "publication_date": "2007.03.06",
+                "id": "US7185846B1_20070306",
+                "publishing_office": "US"
+              },
+              "text": "US 7185846 B1, 06.03.2007."
+            },
+            {
+              "text": "Интернет-статья AGM-129A ADVANCED CRUISE MISSILE, опубл. 17.01.2011. Найдено в Интернет <URL: archive.is/20120716102842/http://www.af.mil/information/factsheets/factsheet.asp?id=3548>."
+            },
+            {
+              "doc": {
+                "document_number": "2522342",
+                "kind": "C1",
+                "identity": "RU2522342C1",
+                "publication_date": "2014.07.10",
+                "id": "RU2522342C1_20140710",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2522342 C1, 10.07.2014."
+            },
+            {
+              "doc": {
+                "document_number": "2492413",
+                "kind": "C1",
+                "identity": "RU2492413C1",
+                "publication_date": "2013.09.10",
+                "id": "RU2492413C1_20130910",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2492413 C1, 10.09.2013."
+            },
+            {
+              "doc": {
+                "document_number": "2034232",
+                "kind": "C1",
+                "identity": "RU2034232C1",
+                "publication_date": "1995.04.30",
+                "id": "RU2034232C1_19950430",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2034232 C1, 30.04.1995."
+            },
+            {
+              "doc": {
+                "document_number": "2483273",
+                "kind": "C1",
+                "identity": "RU2483273C1",
+                "publication_date": "2013.05.27",
+                "id": "RU2483273C1_20130527",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2483273 C1, 27.05.2013."
+            },
+            {
+              "doc": {
+                "document_number": "2102686",
+                "kind": "C1",
+                "identity": "RU2102686C1",
+                "publication_date": "1998.01.20",
+                "id": "RU2102686C1_19980120",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2102686 C1, 20.01.1998."
+            },
+            {
+              "doc": {
+                "document_number": "2303229",
+                "kind": "C1",
+                "identity": "RU2303229C1",
+                "publication_date": "2007.07.20",
+                "id": "RU2303229C1_20070720",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2303229 C1, 20.07.2007."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ],
+          "title": "MISSILE AND METHOD FOR ITS OPERATING",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20160710/0002590760/00000001.tif",
+          "width": "164",
+          "height": "233"
+        }
+      ],
+      "id": "RU2590760C2_20160710",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 82.22178,
+      "similarity_norm": 0.9879839147876914,
+      "snippet": {
+        "title": "<em>РАКЕТА</em> И СПОСОБ ЕЁ РАБОТЫ",
+        "description": "Способ работы групповой и заключается в следующем: а) при групповом пуске первой (первыми) запускается вспомогательная <em>ракета</em> с двумя типами <em>ракет</em> класса «воздух-воздух» - малой дальности (300-1000 м) для защиты от <em>ракет</em> противника класса «воздух-воздух», и средней дальности (50-60 км) для защиты от самолетов противника, при этом воздушные цели распознаются по сумме их параметров (радиолокационная сигнатура, направление и скорость полета, тепловое излучение), б) затем запускается вспомогательная <em>ракета</em> (<em>ракеты</em>) с меньшими <em>ракетами</em>, в) затем запускается вспомогательная <em>ракета</em> (<em>ракеты</em>) со снарядами, и отдельная или комбинированная с ней <em>ракета</em> с аппаратурой постановки радиолокационных помех, г) затем запускается основная <em>ракета</em> (<em>ракеты</em>), д) при приближении к цели на 40-60 км вспомогательная <em>ракета</em> с меньшими <em>ракетами</em> дополнительно разгоняется, и по цели выпускаются меньшие <em>ракеты</em> с указанными выше боеголовками, е) при приближении к цели на 20-40 км вспомогательная <em>ракета</em> со снарядами дополнительно ...",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F41H11/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2652024",
+        "kind": "C1",
+        "publication_date": "2018.04.24",
+        "application": {
+          "number": "2017110200",
+          "filing_date": "2017.03.27",
+          "rights_start_date": "2017.03.27"
+        },
+        "classification": {
+          "cpc": [
+            {
+              "main_group": "12",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B12/00",
+              "class": "42"
+            },
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            }
+          ],
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            },
+            {
+              "main_group": "12",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B12/00",
+              "class": "42"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C1/20180424/0002652024",
+          "file": "0002652024.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "RU 2527610 C2, 10.09.2014. RU 23100 U1, 20.05.2002. RU 2367893 С2, 20.09.2009. RU 95107360 А1, 10.04.1997. US 4560595 A, 24.12.1985. СТЕПАНОВ В. В., Современные противотанковые средства, Санкт-Петербург, Реноме, 2016, с. 122-134.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "Ракета с динамическими помехами",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "doc": {
+                "document_number": "2527610",
+                "kind": "C2",
+                "identity": "RU2527610C2",
+                "publication_date": "2014.09.10",
+                "id": "RU2527610C2_20140910",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2527610 C2, 10.09.2014."
+            },
+            {
+              "doc": {
+                "document_number": "23100",
+                "kind": "U1",
+                "identity": "RU23100U1",
+                "publication_date": "2002.05.20",
+                "id": "RU23100U1_20020520",
+                "publishing_office": "RU"
+              },
+              "text": "RU 23100 U1, 20.05.2002."
+            },
+            {
+              "doc": {
+                "document_number": "2367893",
+                "kind": "C2",
+                "identity": "RU2367893C2",
+                "publication_date": "2009.09.20",
+                "id": "RU2367893C2_20090920",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2367893 С2, 20.09.2009."
+            },
+            {
+              "doc": {
+                "document_number": "95107360",
+                "kind": "A1",
+                "identity": "RU95107360A1",
+                "publication_date": "1997.04.10",
+                "id": "RU95107360A1_19970410",
+                "publishing_office": "RU"
+              },
+              "text": "RU 95107360 А1, 10.04.1997."
+            },
+            {
+              "doc": {
+                "document_number": "4560595",
+                "kind": "A",
+                "identity": "US4560595A",
+                "publication_date": "1985.12.24",
+                "id": "US4560595A_19851224",
+                "publishing_office": "US"
+              },
+              "text": "US 4560595 A, 24.12.1985."
+            },
+            {
+              "text": "СТЕПАНОВ В. В., Современные противотанковые средства, Санкт-Петербург, Реноме, 2016, с. 122-134."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ],
+          "title": "MISSILES WITH DYNAMIC NOISE",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C1/20180424/0002652024/00000001.tif",
+          "width": "210",
+          "height": "297"
+        }
+      ],
+      "id": "RU2652024C1_20180424",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 82.048965,
+      "similarity_norm": 0.9879589107462086,
+      "snippet": {
+        "title": "<em>Ракета</em> с динамическими помехами",
+        "description": "Но створка является необязательной, так как пуск ложных <em>ракет</em> производится в непосредственной близости от танка и небольшое ухудшение аэродинамики при этом не имеет существенного значения. Работает противотанковая <em>ракета</em> так: примерно за 100 метров до танка (зависит от скорости <em>ракеты</em>) по сигналу дальномера люки центросимметрично (то есть диаметрально) открываются, и <em>ракеты</em> выпускаются вперед. При этом возможны два случая - если <em>ракета</em> неуправляемая («граната» гранатомета), то пускать ложные <em>ракеты</em> обязательно надо парами, чтобы несимметричное обтекание противотанковой <em>ракеты</em> не увело ее с нужного курса. То есть, приближаясь к танку, противотанковая <em>ракета</em> выпустит три пары ложных <em>ракет</em> 2. Если же <em>ракета</em> управляемая, то можно пускать ложные <em>ракеты</em> по одной - это в наибольшей степени затруднит работу защитной системы танка. Более того, открывать все шесть люков при этом можно не парами, а сразу (но пускать все равно надо центросимметрично).",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2482436",
+        "kind": "C1",
+        "publication_date": "2013.05.20",
+        "application": {
+          "number": "2011145800/11",
+          "filing_date": "2011.11.10",
+          "rights_start_date": "2011.11.10"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C1/20130520/0002482436",
+          "file": "0002482436.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "RU 2310809 С2, 20.11.2007. RU 2258898 C1, 20.08.2005. ЕР 0930994 В1, 05.03.2003.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "РАКЕТА С БЕСКОРПУСНЫМ ДВИГАТЕЛЕМ (ВАРИАНТЫ)",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "doc": {
+                "document_number": "2310809",
+                "kind": "C2",
+                "identity": "RU2310809C2",
+                "publication_date": "2007.11.20",
+                "id": "RU2310809C2_20071120",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2310809 С2, 20.11.2007."
+            },
+            {
+              "doc": {
+                "document_number": "2258898",
+                "kind": "C1",
+                "identity": "RU2258898C1",
+                "publication_date": "2005.08.20",
+                "id": "RU2258898C1_20050820",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2258898 C1, 20.08.2005."
+            },
+            {
+              "doc": {
+                "document_number": "0930994",
+                "kind": "B1",
+                "identity": "EP0930994B1",
+                "publication_date": "2003.03.05",
+                "id": "EP0930994B1_20030305",
+                "publishing_office": "EP"
+              },
+              "text": "ЕР 0930994 В1, 05.03.2003."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgen'evich (RU)"
+            }
+          ],
+          "title": "ROCKET WITH FRAMELESS MOTOR /VERSIONS/",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgen'evich (RU)"
+            }
+          ]
+        }
+      },
+      "id": "RU2482436C1_20130520",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 81.42508,
+      "similarity_norm": 0.9878677703436867,
+      "snippet": {
+        "title": "<em>РАКЕТА</em> С БЕСКОРПУСНЫМ ДВИГАТЕЛЕМ (ВАРИАНТЫ)",
+        "description": "Работает <em>ракета</em> так: при пуске все три катапультных узла синхронно отсоединяются, <em>ракета</em> отделяется от самолета, и через некоторое время включается ракетный двигатель.",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2439476",
+        "kind": "C2",
+        "publication_date": "2012.01.10",
+        "application": {
+          "number": "2009110075/11",
+          "filing_date": "2009.03.19",
+          "rights_start_date": "2009.03.19"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C2/20120110/0002439476",
+          "file": "0002439476.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "ОСТОСЛАВСКИЙ И.В., СТРАЖЕВА И.В. ДИНАМИКА ПОЛЕТА. ТРАЕКТОРИИ ЛЕТАТЕЛЬНЫХ АППАРАТОВ. - М.: МАШИНОСТРОЕНИЕ, 1969, с.94-95, рис.2.3. ЛОКК А.С. УПРАВЛЕНИЕ СНАРЯДАМИ. - М.: ГОСУДАРСТВЕННОЕ ИЗДАТЕЛЬСТВО ФИЗИКО-МАТЕМАТИЧЕСКОЙ ЛИТЕРАТУРЫ, 1958 с.74, 75, рис.2.19. ПЕТРОВ В.П., СОЧИВКО А.А. УПРАВЛЕНИЕ РАКЕТАМИ. - М.: ВОЕННОЕ ИЗДАТЕЛЬСТВО МИНИСТЕРСТВА ОБОРОНЫ СССР, 1963, с.44-45, рис.23, с.66-68, с.115, 116, с.139-142, рис.72, рис.37. RU 2111445 C1, 20.05.1998. ШИРОКОРАД А.Б. ИСТОРИЯ АВИАЦИОННОГО ВООРУЖЕНИЯ. - МИНСК: из-во ХАРВЕСТ, 1999, с.321-324, с.344-346, с.450-454, рис.105, рис.122, рис.162-165. RU 2184927 C1, 10.07.2002. US 3415466 A, 16.05.1966.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "ПРОТИВОСАМОЛЕТНАЯ РАКЕТА",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "text": "ОСТОСЛАВСКИЙ И.В., СТРАЖЕВА И.В. ДИНАМИКА ПОЛЕТА. ТРАЕКТОРИИ ЛЕТАТЕЛЬНЫХ АППАРАТОВ. - М.: МАШИНОСТРОЕНИЕ, 1969, с.94-95, рис.2.3. ЛОКК А.С. УПРАВЛЕНИЕ СНАРЯДАМИ. - М.: ГОСУДАРСТВЕННОЕ ИЗДАТЕЛЬСТВО ФИЗИКО-МАТЕМАТИЧЕСКОЙ ЛИТЕРАТУРЫ, 1958 с.74, 75, рис.2.19. ПЕТРОВ В.П., СОЧИВКО А.А. УПРАВЛЕНИЕ РАКЕТАМИ. - М.: ВОЕННОЕ ИЗДАТЕЛЬСТВО МИНИСТЕРСТВА ОБОРОНЫ СССР, 1963, с.44-45, рис.23, с.66-68, с.115, 116, с.139-142, рис.72, рис.37."
+            },
+            {
+              "doc": {
+                "document_number": "2111445",
+                "kind": "C1",
+                "identity": "RU2111445C1",
+                "publication_date": "1998.05.20",
+                "id": "RU2111445C1_19980520",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2111445 C1, 20.05.1998."
+            },
+            {
+              "text": "ШИРОКОРАД А.Б. ИСТОРИЯ АВИАЦИОННОГО ВООРУЖЕНИЯ. - МИНСК: из-во ХАРВЕСТ, 1999, с.321-324, с.344-346, с.450-454, рис.105, рис.122, рис.162-165."
+            },
+            {
+              "doc": {
+                "document_number": "2184927",
+                "kind": "C1",
+                "identity": "RU2184927C1",
+                "publication_date": "2002.07.10",
+                "id": "RU2184927C1_20020710",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2184927 C1, 10.07.2002."
+            },
+            {
+              "doc": {
+                "document_number": "3415466",
+                "kind": "A",
+                "identity": "US3415466A",
+                "publication_date": "1966.05.16",
+                "id": "US3415466A_19660516",
+                "publishing_office": "US"
+              },
+              "text": "US 3415466 A, 16.05.1966."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgen'evich (RU)"
+            }
+          ],
+          "title": "COUNTERAIR MISSILE",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgen'evich (RU)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000002.TIF",
+          "width": "156",
+          "height": "46"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000003.TIF",
+          "width": "154",
+          "height": "51"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000004.TIF",
+          "width": "156",
+          "height": "40"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000005.TIF",
+          "width": "155",
+          "height": "43"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000006.TIF",
+          "width": "44",
+          "height": "38"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000007.TIF",
+          "width": "43",
+          "height": "40"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000008.TIF",
+          "width": "41",
+          "height": "51"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000009.TIF",
+          "width": "159",
+          "height": "85"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000010.TIF",
+          "width": "144",
+          "height": "74"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000011.TIF",
+          "width": "158",
+          "height": "88"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000012.TIF",
+          "width": "158",
+          "height": "69"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000013.TIF",
+          "width": "78",
+          "height": "68"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000014.TIF",
+          "width": "154",
+          "height": "93"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000015.TIF",
+          "width": "143",
+          "height": "76"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C2/20120110/0002439476/00000016.TIF",
+          "width": "69",
+          "height": "83"
+        }
+      ],
+      "id": "RU2439476C2_20120110",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 81.2538,
+      "similarity_norm": 0.9878425069723222,
+      "snippet": {
+        "title": "ПРОТИВОСАМОЛЕТНАЯ <em>РАКЕТА</em>",
+        "description": "Управлять по крену элеронами не имеет смысла, т.к. размах рулей на <em>ракетах</em> примерно равен размаху крыла или даже превышает его. И применение элеронов или интерцепторов только усложнит конструкцию и увеличит вес <em>ракеты</em> /потребуется 2 дополнительных привода и электропитание для них/. Аэродинамическая стабилизация <em>ракеты</em> по тангажу /к <em>ракете</em> с плоским крылом применима самолетная терминология/ производится соответствующим местоположением крыла по длине <em>ракеты</em>. Для стабилизации <em>ракеты</em> по рысканью имеется 2 небольших киля, лежащих в перпендикулярной крыльям плоскости, или 4 киля, расположенных парами Х-образно или крестообразно. Т.е. <em>ракета</em> имеет “самолетный” вид с одним существенным отличием: ее конструкция и управление симметричны относительно плоскости крыла без разделения на “верх” и “низ”. См. фиг.3, 4, 6. То есть <em>ракета</em> способна совершать маневры с одинаковой перегрузкой по тангажу как “вверх”, так и “вниз”. Возможен, особенно для <em>ракет</em> В-В, вариант, когда <em>ракета</em> может не иметь килей.",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2661490",
+        "kind": "C1",
+        "publication_date": "2018.07.17",
+        "application": {
+          "number": "2017116362",
+          "filing_date": "2017.05.10",
+          "rights_start_date": "2017.05.10"
+        },
+        "classification": {
+          "cpc": [
+            {
+              "main_group": "10",
+              "classification_value": "invention",
+              "subgroup": "56",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B10/56",
+              "class": "42"
+            },
+            {
+              "main_group": "10",
+              "classification_value": "invention",
+              "subgroup": "60",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B10/60",
+              "class": "42"
+            },
+            {
+              "main_group": "1",
+              "classification_value": "invention",
+              "subgroup": "04",
+              "subclass": "D",
+              "section": "B",
+              "fullname": "B64D1/04",
+              "class": "64"
+            },
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            }
+          ],
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            },
+            {
+              "main_group": "10",
+              "classification_value": "invention",
+              "subgroup": "56",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B10/56",
+              "class": "42"
+            },
+            {
+              "main_group": "10",
+              "classification_value": "invention",
+              "subgroup": "60",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B10/60",
+              "class": "42"
+            },
+            {
+              "main_group": "1",
+              "classification_value": "invention",
+              "subgroup": "04",
+              "subclass": "D",
+              "section": "B",
+              "fullname": "B64D1/04",
+              "class": "64"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C1/20180717/0002661490",
+          "file": "0002661490.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "Противорадиолокационная ракета ALARM, Информационно-новостная система Ракетная техника, 13.10.2011 [найдено 07.05.2018]. Найдено в интернет: http://rbase.new-factoria.ru/missile/wobb/alarm/alarm.shtml. RU 2151363 C1, 20.06.2000. US 3063375 A1, 13.11.1962. EP 2428445 B1, 26.03.2014. FR 1257614 A, 07.04.1961. RU 2549923 C2, 10.05.2015. RU 2422329 C1, 27.06.2011.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "Авиационная ракета",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "text": "Противорадиолокационная ракета ALARM, Информационно-новостная система Ракетная техника, 13.10.2011 [найдено 07.05.2018]. Найдено в интернет: http://rbase.new-factoria.ru/missile/wobb/alarm/alarm.shtml."
+            },
+            {
+              "doc": {
+                "document_number": "2151363",
+                "kind": "C1",
+                "identity": "RU2151363C1",
+                "publication_date": "2000.06.20",
+                "id": "RU2151363C1_20000620",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2151363 C1, 20.06.2000."
+            },
+            {
+              "doc": {
+                "document_number": "3063375",
+                "kind": "A1",
+                "identity": "US3063375A1",
+                "publication_date": "1962.11.13",
+                "id": "US3063375A1_19621113",
+                "publishing_office": "US"
+              },
+              "text": "US 3063375 A1, 13.11.1962."
+            },
+            {
+              "doc": {
+                "document_number": "2428445",
+                "kind": "B1",
+                "identity": "EP2428445B1",
+                "publication_date": "2014.03.26",
+                "id": "EP2428445B1_20140326",
+                "publishing_office": "EP"
+              },
+              "text": "EP 2428445 B1, 26.03.2014."
+            },
+            {
+              "doc": {
+                "document_number": "1257614",
+                "kind": "A",
+                "identity": "FR1257614A",
+                "publication_date": "1961.04.07",
+                "id": "FR1257614A_19610407",
+                "publishing_office": "FR"
+              },
+              "text": "FR 1257614 A, 07.04.1961."
+            },
+            {
+              "doc": {
+                "document_number": "2549923",
+                "kind": "C2",
+                "identity": "RU2549923C2",
+                "publication_date": "2015.05.10",
+                "id": "RU2549923C2_20150510",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2549923 C2, 10.05.2015."
+            },
+            {
+              "doc": {
+                "document_number": "2422329",
+                "kind": "C1",
+                "identity": "RU2422329C1",
+                "publication_date": "2011.06.27",
+                "id": "RU2422329C1_20110627",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2422329 C1, 27.06.2011."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ],
+          "title": "AIR-FIRED MISSILE",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C1/20180717/0002661490/00000001.tif",
+          "width": "210",
+          "height": "297"
+        }
+      ],
+      "id": "RU2661490C1_20180717",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 80.84824,
+      "similarity_norm": 0.9877822663016333,
+      "snippet": {
+        "title": "Авиационная <em>ракета</em>",
+        "description": "Изобретение относится к <em>ракетам</em> класса «воздух-воздух». Известны подобные <em>ракеты</em>, см. например, пат. №2439476, содержащие фюзеляж, двигатель, и головку самонаведения (далее ГСН). Недостатком известных <em>ракет</em> является невозможность пуска назад. Когда-то некие неучи попробовали пускать с самолета <em>ракету</em> назад, но, как и следовало ожидать, <em>ракета</em> развернулась и стала догонять выпустивший ее самолет. Задача и технический результат изобретения - возможность пуска <em>ракеты</em> назад в секторе +- 135-180° (относительно носа самолета). Для этого <em>ракета</em> имеет, как обычно, фюзеляж, двигатель и головку самонаведения, но имеет оперение, установленное с возможностью менять свое положение относительно центра масс <em>ракеты</em>, а также имеет отцепляемый парашют, уложенный в сбрасываемый обтекатель, расположенный перед носовой частью <em>ракеты</em>.",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2494340",
+        "kind": "C1",
+        "publication_date": "2013.09.27",
+        "application": {
+          "number": "2012139983/11",
+          "filing_date": "2012.09.18",
+          "rights_start_date": "2012.09.18"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C1/20130927/0002494340",
+          "file": "0002494340.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "US 7851732 B2, 14.12.2010. US 20120167795 A1, 05.07.2012. RU 2150080 C1, 27.05.2000.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "РАКЕТА С БЕСКОРПУСНЫМ БЕССОПЛОВЫМ ДВИГАТЕЛЕМ ТОРЦЕВОГО ГОРЕНИЯ (ВАРИАНТЫ)",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "doc": {
+                "document_number": "7851732",
+                "kind": "B2",
+                "identity": "US7851732B2",
+                "publication_date": "2010.12.14",
+                "id": "US7851732B2_20101214",
+                "publishing_office": "US"
+              },
+              "text": "US 7851732 B2, 14.12.2010."
+            },
+            {
+              "doc": {
+                "document_number": "20120167795",
+                "kind": "A1",
+                "identity": "US20120167795A1",
+                "publication_date": "2012.07.05",
+                "id": "US20120167795A1_20120705",
+                "publishing_office": "US"
+              },
+              "text": "US 20120167795 A1, 05.07.2012."
+            },
+            {
+              "doc": {
+                "document_number": "2150080",
+                "kind": "C1",
+                "identity": "RU2150080C1",
+                "publication_date": "2000.05.27",
+                "id": "RU2150080C1_20000527",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2150080 C1, 27.05.2000."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgen'evich (RU)"
+            }
+          ],
+          "title": "MISSILE WITH CASELESS NOZZLELESS ENG-IGNITION ENGINE (VERSIONS)",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgen'evich (RU)"
+            }
+          ]
+        }
+      },
+      "drawings": [
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C1/20130927/0002494340/00000002.TIF",
+          "width": "143",
+          "height": "130"
+        },
+        {
+          "url": "/media/RUPAT_NEW_2009/RU/C1/20130927/0002494340/00000003.TIF",
+          "width": "161",
+          "height": "137"
+        }
+      ],
+      "id": "RU2494340C1_20130927",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 80.84769,
+      "similarity_norm": 0.9877821842009225,
+      "snippet": {
+        "title": "<em>РАКЕТА</em> С БЕСКОРПУСНЫМ БЕССОПЛОВЫМ ДВИГАТЕЛЕМ ТОРЦЕВОГО ГОРЕНИЯ (ВАРИАНТЫ)",
+        "description": "Работает <em>ракета</em> так: крыльчатка 5 под действием истекающих газов 8 вращается, нить 6 наматывается на вал 4, и втулка 2 автоматически подтягивается к головной части <em>ракеты</em> по мере обгорания торца двигателя. ВАРИАНТ 2. Крыльчатка с косыми или с поперечными лопастями может быть установлена и на головной части <em>ракеты</em> - это несколько уменьшит аэродинамическое сопротивление <em>ракеты</em> вследствие того, что нитяные шпули будут спрятаны в корпусе головной части <em>ракеты</em>. При этом система подтягивания нити может содержать редуктор (например, червячный) и центробежный стабилизатор частоты вращения. Скорость подтягивания при этом должна рассчитываться чуть больше, чем линейная скорость горения шашки двигателя. ВАРИАНТ 3. Мощность, необходимая для подтягивания втулки со стабилизаторами, сравнительно небольшая. Поэтому ее подтягивание может осуществляться электродвигателем. Такая <em>ракета</em> содержит в головной части электродвигатель, редуктор и две или более шпули для намотки нити.",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    },
+    {
+      "common": {
+        "publishing_office": "RU",
+        "document_number": "2625135",
+        "kind": "C1",
+        "publication_date": "2017.07.11",
+        "application": {
+          "number": "2016106282",
+          "filing_date": "2016.02.24",
+          "rights_start_date": "2016.02.24"
+        },
+        "classification": {
+          "ipc": [
+            {
+              "main_group": "15",
+              "classification_value": "invention",
+              "subgroup": "00",
+              "subclass": "B",
+              "section": "F",
+              "fullname": "F42B15/00",
+              "class": "42"
+            },
+            {
+              "main_group": "7",
+              "classification_value": "invention",
+              "subgroup": "22",
+              "subclass": "G",
+              "section": "F",
+              "fullname": "F41G7/22",
+              "class": "41"
+            }
+          ]
+        }
+      },
+      "meta": {
+        "source": {
+          "path": "/RUPAT_NEW_2009/RU/C1/20170711/0002625135",
+          "file": "0002625135.xml",
+          "index": "RUPAT_NEW_2009",
+          "from": "patsearch"
+        }
+      },
+      "biblio": {
+        "ru": {
+          "citations": "RU 2514324 C1, 27.04.2014. RU 40673 U1, 20.09.2004. RU 127889 U1, 10.05.2013. RU 2111439 C1, 20.05.1998. RU 2295103 C2, 10.03.2007. RU 2373485 C2, 20.11.2009.",
+          "inventor": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "title": "Способ парного пуска противосамолётных ракет",
+          "patentee": [
+            {
+              "name": "Староверов Николай Евгеньевич (RU)"
+            }
+          ],
+          "citations_parsed": [
+            {
+              "doc": {
+                "document_number": "2514324",
+                "kind": "C1",
+                "identity": "RU2514324C1",
+                "publication_date": "2014.04.27",
+                "id": "RU2514324C1_20140427",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2514324 C1, 27.04.2014."
+            },
+            {
+              "doc": {
+                "document_number": "40673",
+                "kind": "U1",
+                "identity": "RU40673U1",
+                "publication_date": "2004.09.20",
+                "id": "RU40673U1_20040920",
+                "publishing_office": "RU"
+              },
+              "text": "RU 40673 U1, 20.09.2004."
+            },
+            {
+              "doc": {
+                "document_number": "127889",
+                "kind": "U1",
+                "identity": "RU127889U1",
+                "publication_date": "2013.05.10",
+                "id": "RU127889U1_20130510",
+                "publishing_office": "RU"
+              },
+              "text": "RU 127889 U1, 10.05.2013."
+            },
+            {
+              "doc": {
+                "document_number": "2111439",
+                "kind": "C1",
+                "identity": "RU2111439C1",
+                "publication_date": "1998.05.20",
+                "id": "RU2111439C1_19980520",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2111439 C1, 20.05.1998."
+            },
+            {
+              "doc": {
+                "document_number": "2295103",
+                "kind": "C2",
+                "identity": "RU2295103C2",
+                "publication_date": "2007.03.10",
+                "id": "RU2295103C2_20070310",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2295103 C2, 10.03.2007."
+            },
+            {
+              "doc": {
+                "document_number": "2373485",
+                "kind": "C2",
+                "identity": "RU2373485C2",
+                "publication_date": "2009.11.20",
+                "id": "RU2373485C2_20091120",
+                "publishing_office": "RU"
+              },
+              "text": "RU 2373485 C2, 20.11.2009."
+            }
+          ]
+        },
+        "en": {
+          "inventor": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ],
+          "title": "METHOD OF STEAM START OF ANTI-AIRCRAFT MISSILES",
+          "patentee": [
+            {
+              "name": "Staroverov Nikolaj Evgenevich (RU)"
+            }
+          ]
+        }
+      },
+      "id": "RU2625135C1_20170711",
+      "index": "jun_rupat_new_2009",
+      "dataset": "ru_since_1994",
+      "similarity": 80.77343,
+      "similarity_norm": 0.9877710889710754,
+      "snippet": {
+        "title": "Способ парного пуска противосамолётных <em>ракет</em>",
+        "description": "Тогда траектория второй <em>ракеты</em> будет пролегать несколько выше траектории первой <em>ракеты</em> и соударения второй <em>ракеты</em> с отделившейся ступенью исключено.",
+        "lang": "ru",
+        "inventor": "Староверов Николай Евгеньевич (RU)",
+        "patentee": "Староверов Николай Евгеньевич (RU)",
+        "classification": {
+          "ipc": "F42B15/00"
+        }
+      }
+    }
+  ]
+}

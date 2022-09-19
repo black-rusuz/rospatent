@@ -29,4 +29,7 @@ dev_dependencies:
   build_runner: ^2.2.1
 
 flutter:
+  assets:
+    - assets/json/response.json
+
   uses-material-design: true

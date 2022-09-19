@@ -2,10 +2,13 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
 import '../domain/search_api.dart';
 import 'model/search_response.dart';
+
+const bool debugMode = true;
 
 class Print {
   static void json(Object? json) {
@@ -34,10 +37,19 @@ class SearchApiImpl implements SearchApi {
   }
 
   @override
-  Future<void> search(String data) async {
-    final response = await client.post('$url/search', data: {'q': data});
-    print(response.statusCode);
-    Print.json(response.data);
-    final model = SearchResponse.fromJson(response.data);
+  Future<void> search(String pattern) async {
+    final timer = Stopwatch()..start();
+    late final data;
+    if (!debugMode) {
+      final response = await client.post('$url/search', data: {'q': pattern});
+      data = response.data;
+      print(response.statusCode);
+    } else {
+      final json = await rootBundle.loadString('assets/json/response.json');
+      data = jsonDecode(json);
+    }
+    //Print.json(data);
+    final model = SearchResponse.fromJson(data);
+    debugPrint('LOAD TIME: ${timer.elapsed}');
   }
 }
