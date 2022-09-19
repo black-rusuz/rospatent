@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Style {
-  static const Color primary = Color(0x00363636);
-  static const Color secondary = Color(0x00b9b9c5);
-  static const Color background = Color(0x00f7f8fb);
+  static const Color primary = Color.fromRGBO(54, 54, 54, 1);
+  static const Color secondary = Color.fromRGBO(185, 185, 197, 1);
+  static const Color background = Color.fromRGBO(247, 248, 251, 1);
 }

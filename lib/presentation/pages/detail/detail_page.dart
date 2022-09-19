@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,6 +12,12 @@ class Detail extends StatelessWidget {
 
   Snippet get info => item.snippet;
 
+  TextStyle get textStyleBold => GoogleFonts.ptSans(
+      fontSize: 12, fontWeight: FontWeight.bold, color: Style.primary);
+
+  TextStyle get textStyle => GoogleFonts.ptSans(
+      fontSize: 12, fontWeight: FontWeight.bold, color: Style.primary);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +29,23 @@ class Detail extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(Icons.arrow_back_ios_new_rounded),
             ),
-            title: Text('Документ ${info.title}',
-                style: GoogleFonts.ptSans(fontSize: 14)),
+            title: Text(
+              'Документ ${info.title}',
+              style: GoogleFonts.ptSans(
+                  fontSize: 14,
+                  color: Style.primary,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Column(
+                children: [
+                  Text(info.title, style: textStyleBold),
+                ],
+              )
+            ]),
+          )
         ],
       ),
     );
