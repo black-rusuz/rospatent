@@ -8,8 +8,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    sl<ISearchApi>().search('ракета');
     return Scaffold(
-      body: Center(child: Text(sl<ISearchApi>().url)),
+      body: Center(
+        child: Text(sl<ISearchApi>().url),
+      ),
     );
   }
 }
