@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 import '../../data/model/hit.dart';
 
@@ -20,7 +21,15 @@ class ResultItem extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text(item.snippet.title),
+          child: Html(
+            //TODO: change font
+            data: item.snippet.title,
+            style: {
+              'em': Style(
+                backgroundColor: Colors.yellowAccent,
+              ),
+            },
+          ),
         ),
       ),
     );
