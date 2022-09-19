@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../domain/i_search_api.dart';
+import '../domain/search_api.dart';
 import '../injection.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,10 +8,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    sl<ISearchApi>().search('ракета');
+    sl<SearchApi>().search('ракета');
     return Scaffold(
       body: Center(
-        child: Text(sl<ISearchApi>().url),
+        child: Text(sl<SearchApi>().url),
       ),
     );
   }

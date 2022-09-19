@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
-import '../domain/i_search_api.dart';
+import '../domain/search_api.dart';
 
-@Singleton(as: ISearchApi)
-class SearchApi implements ISearchApi {
+@Singleton(as: SearchApi)
+class SearchApiImpl implements SearchApi {
   final Dio client;
 
   @override
@@ -17,7 +17,7 @@ class SearchApi implements ISearchApi {
         'Content-Type': 'application/json',
       };
 
-  SearchApi({required this.client}) {
+  SearchApiImpl({required this.client}) {
     client.options.headers = headers;
   }
 

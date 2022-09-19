@@ -9,8 +9,8 @@ import 'package:dio/dio.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import 'data/search_api.dart' as _i5;
-import 'domain/i_search_api.dart' as _i4;
+import 'data/search_api_impl.dart' as _i5;
+import 'domain/search_api.dart' as _i4;
 import 'injection.dart' as _i6; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
@@ -27,7 +27,7 @@ _i1.GetIt $initGetIt(
   );
   final registerModule = _$RegisterModule();
   gh.singleton<_i3.Dio>(registerModule.client);
-  gh.singleton<_i4.ISearchApi>(_i5.SearchApi(client: get<_i3.Dio>()));
+  gh.singleton<_i4.SearchApi>(_i5.SearchApiImpl(client: get<_i3.Dio>()));
   return get;
 }
 
