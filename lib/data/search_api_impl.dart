@@ -50,7 +50,7 @@ class SearchApiImpl implements SearchApi {
       final json = await rootBundle.loadString('assets/json/response.json');
       data = jsonDecode(json);
     }
-    //Print.json(data);
+    // Print.json(data);
     final model = SearchResponse.fromJson(data);
     debugPrint('LOAD TIME: ${timer.elapsed}');
     return model;
