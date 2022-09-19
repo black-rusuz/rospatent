@@ -8,9 +8,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(sl<ISearchApi>());
-    return const Scaffold(
-      body: Center(child: Text('zalupa')),
+    return Scaffold(
+      body: Center(child: Text(sl<ISearchApi>().url)),
     );
   }
 }
