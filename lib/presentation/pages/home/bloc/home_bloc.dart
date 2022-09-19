@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
@@ -20,7 +18,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   void _search(HomeSearch event, Emitter<HomeState> emit) async {
     emit(HomeLoading());
-    print(event.pattern);
     try {
       final response = await _api.search(event.pattern);
       emit(HomeResults(results: response.hits));
