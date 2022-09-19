@@ -12,7 +12,7 @@ class HomeInitial extends HomeState {}
 class HomeLoading extends HomeState {}
 
 class HomeResults extends HomeState {
-  final List results;
+  final List<Hit> results;
 
   const HomeResults({required this.results});
 

@@ -21,7 +21,7 @@ class Snippet {
       description: json['description'],
       lang: json['lang'],
       applicant: json['applicant'] ?? '',
-      inventor: json['inventor'],
+      inventor: json['inventor'] ?? '',
       classification: json['classification'],
     );
   }
