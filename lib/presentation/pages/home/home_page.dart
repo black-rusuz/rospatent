@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                 BaseTextField(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   controller: controller,
-                  placeholder: 'Что вы ищите?',
+                  placeholder: 'Что вы ищете?',
                   icon: const Icon(Icons.search),
                   onPressed: search,
                 ),

@@ -10,7 +10,6 @@ class Loader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
-        // TODO: ЗА ЭТУ ПАРАШУ РАНЬШЕ СЖИГАЛИ
         onDoubleTap: () => context.read<HomeBloc>().emit(HomeInitial()),
         child: const CircularProgressIndicator(),
       ),

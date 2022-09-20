@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../data/model/hit.dart';
 import '../pages/detail/detail_page.dart';
@@ -10,12 +9,11 @@ class ResultItem extends StatelessWidget {
 
   const ResultItem({super.key, required this.item});
 
-  TextStyle get textStyle => GoogleFonts.ptSans(
-        fontSize: 12,
-        fontWeight: FontWeight.bold,
-        color: const Color.fromRGBO(185, 185, 197, 1),
-        //TODO: Русик почини стайл и поменяй цвет
-      );
+  static const TextStyle textStyle = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: Color.fromRGBO(185, 185, 197, 1),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +32,6 @@ class ResultItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Html(
-                //TODO: change font
                 data: item.snippet.title,
                 style: {
                   'em': Style(

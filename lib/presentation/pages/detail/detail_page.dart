@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
@@ -12,11 +11,10 @@ class Detail extends StatelessWidget {
 
   Snippet get info => item.snippet;
 
-  TextStyle get textStyleBold => GoogleFonts.ptSans(
+  static const TextStyle bold = TextStyle(
       fontSize: 12, fontWeight: FontWeight.bold, color: Style.primary);
 
-  TextStyle get textStyle => GoogleFonts.ptSans(
-      fontSize: 12, fontWeight: FontWeight.bold, color: Style.primary);
+  static const TextStyle normal = TextStyle(fontSize: 12, color: Style.primary);
 
   //TODO: сниппет - для карточки, мне нужно то, что в каммоне и только, ПЕРЕДЕЛАТЬ
 
@@ -32,11 +30,9 @@ class Detail extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_ios_new_rounded),
             ),
             title: Text(
+              // TODO: В гетер
               'Документ ${item.common.publishingOffice} ${item.common.documentNumber} ${item.common.kind}',
-              style: GoogleFonts.ptSans(
-                  fontSize: 14,
-                  color: Style.primary,
-                  fontWeight: FontWeight.bold),
+              style: bold.copyWith(fontSize: 14),
             ),
           ),
           SliverList(
@@ -45,14 +41,14 @@ class Detail extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Column(
                   children: [
-                    Text(info.title, style: textStyleBold),
+                    Text(info.title, style: bold),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
                           Text('сделать'),
                           Text('сделать'),
                         ]),
-                    Text(info.description, style: textStyle),
+                    Text(info.description, style: normal),
                   ],
                 ),
               ),
