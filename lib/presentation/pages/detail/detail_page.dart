@@ -18,6 +18,8 @@ class Detail extends StatelessWidget {
   TextStyle get textStyle => GoogleFonts.ptSans(
       fontSize: 12, fontWeight: FontWeight.bold, color: Style.primary);
 
+  //TODO: сниппет - для карточки, мне нужно то, что в каммоне и только, ПЕРЕДЕЛАТЬ
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,11 +41,21 @@ class Detail extends StatelessWidget {
           ),
           SliverList(
             delegate: SliverChildListDelegate([
-              Column(
-                children: [
-                  Text(info.title, style: textStyleBold),
-                ],
-              )
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Column(
+                  children: [
+                    Text(info.title, style: textStyleBold),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text('сделать'),
+                          Text('сделать'),
+                        ]),
+                    Text(info.description, style: textStyle),
+                  ],
+                ),
+              ),
             ]),
           )
         ],
