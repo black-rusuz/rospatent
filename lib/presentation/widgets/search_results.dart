@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/model/hit.dart';
 import '../pages/home/bloc/home_bloc.dart';
+import '../providers/style.dart';
 import 'result_item.dart';
 
 class SearchResults extends StatelessWidget {
@@ -16,6 +17,7 @@ class SearchResults extends StatelessWidget {
   Widget build(BuildContext context) {
     return RefreshIndicator(
       // TODO: ЗА ЭТУ ПАРАШУ РАНЬШЕ СЖИГАЛИ
+      backgroundColor: Style.background,
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
       child: ListView(children: results.map(mapResults).toList()),
     );

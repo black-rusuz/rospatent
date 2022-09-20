@@ -40,32 +40,40 @@ class ResultItem extends StatelessWidget {
                 style: {
                   'em': Style(
                     backgroundColor: Colors.yellowAccent,
+                    fontStyle: FontStyle.normal,
                   ),
+                  '*:not(em)': Style(
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromRGBO(0, 84, 166, 1),
+                  )
                 },
               ),
-              Text(item.snippet.classification.toString(), style: textStyle),
+              Text('МПК ${item.snippet.classification.toString()}', style: textStyle),
               const SizedBox(height: 4),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Icon(Icons.feed_rounded, size: 15),
                   const SizedBox(width: 5),
-                  Text(item.id, style: textStyle),
+                  Expanded(child: Text(item.id, style: textStyle)),
                 ],
               ),
               const SizedBox(height: 4),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Icon(Icons.people_alt, size: 15),
                   const SizedBox(width: 5),
-                  Text(item.snippet.applicant, style: textStyle),
+                  Expanded(child: Text(item.snippet.applicant, style: textStyle)),
                 ],
               ),
               const SizedBox(height: 4),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Icon(Icons.person, size: 15),
                   const SizedBox(width: 5),
-                  Text(item.snippet.inventor, style: textStyle),
+                  Expanded(child: Text(item.snippet.inventor, style: textStyle)),
                 ],
               ),
             ],
