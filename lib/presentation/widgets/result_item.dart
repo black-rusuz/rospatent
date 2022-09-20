@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../data/model/hit.dart';
+import '../../data/model/snippet.dart';
 import '../pages/detail/detail_page.dart';
 import '../providers/style.dart';
 import 'highlighted_text.dart';
@@ -10,11 +11,13 @@ class ResultItem extends StatelessWidget {
 
   const ResultItem({super.key, required this.item});
 
-  static const TextStyle textStyle = TextStyle(
+  static const TextStyle style = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.bold,
     color: Color.fromRGBO(185, 185, 197, 1),
   );
+
+  Snippet get snippet => item.snippet;
 
   @override
   Widget build(BuildContext context) {
@@ -34,50 +37,41 @@ class ResultItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               HighlightedText(
-                item.snippet.title,
+                snippet.title,
                 textColor: const Color.fromRGBO(0, 84, 166, 1),
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(height: 10),
-              Text(
-                'МПК ${item.snippet.classification}',
-                style: textStyle,
-              ),
+              Text('МПК ${snippet.classification}', style: style),
               const SizedBox(height: 4),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.feed_rounded, size: 15),
-                  const SizedBox(width: 5),
-                  Expanded(child: Text(item.id, style: textStyle)),
-                ],
-              ),
+              Paragraph(Icons.feed_rounded, item.id),
               const SizedBox(height: 4),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.people_alt, size: 15),
-                  const SizedBox(width: 5),
-                  Expanded(
-                    child: Text(item.snippet.applicant, style: textStyle),
-                  ),
-                ],
-              ),
+              Paragraph(Icons.people_alt, snippet.applicant),
               const SizedBox(height: 4),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.person, size: 15),
-                  const SizedBox(width: 5),
-                  Expanded(
-                    child: Text(item.snippet.inventor, style: textStyle),
-                  ),
-                ],
-              ),
+              Paragraph(Icons.person, snippet.inventor),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class Paragraph extends StatelessWidget {
+  final IconData icon;
+  final String data;
+
+  const Paragraph(this.icon, this.data, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(icon, size: 15),
+        const SizedBox(width: 5),
+        Expanded(child: Text(data, style: ResultItem.style)),
+      ],
     );
   }
 }
