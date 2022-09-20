@@ -29,11 +29,10 @@ class Detail extends StatelessWidget {
           SliverAppBar(
             leading: IconButton(
               onPressed: () => Navigator.of(context).pop(true),
-              //TODO: Русик проверь
               icon: const Icon(Icons.arrow_back_ios_new_rounded),
             ),
             title: Text(
-              'Документ ${info.title}',
+              'Документ ${item.common.publishingOffice} ${item.common.docNumber} ${item.common.kind}',
               style: GoogleFonts.ptSans(
                   fontSize: 14,
                   color: Style.primary,
