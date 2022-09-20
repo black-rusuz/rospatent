@@ -5,12 +5,13 @@ class CitationsParsedDoc {
   final String publicationDate;
   final String identity;
 
-  CitationsParsedDoc(
-      {required this.docNumber,
-      required this.publishingOffice,
-      required this.kind,
-      required this.publicationDate,
-      required this.identity});
+  CitationsParsedDoc({
+    required this.docNumber,
+    required this.publishingOffice,
+    required this.kind,
+    required this.publicationDate,
+    required this.identity,
+  });
 
   factory CitationsParsedDoc.fromJson(Map<String, dynamic> json) {
     return CitationsParsedDoc(

@@ -10,7 +10,7 @@ class Common {
   final String publicationDate;
   final List<CommonPriority> priority;
   final CommonApplication application;
-  final List<Classification> classification;
+  final List<Classification> classifications;
   final String familyId;
   final List<CommonCitated> citatedDocs;
 
@@ -21,7 +21,7 @@ class Common {
     required this.publicationDate,
     required this.priority,
     required this.application,
-    required this.classification,
+    required this.classifications,
     required this.familyId,
     required this.citatedDocs,
   });
@@ -38,7 +38,8 @@ class Common {
           .whereType<CommonPriority>()
           .toList(),
       application: CommonApplication.fromJson(json['application']),
-      classification: classifications.values
+      classifications: classifications.values
+          .expand((e) => e)
           .map((e) => Classification.fromJson(e))
           .whereType<Classification>()
           .toList(),
