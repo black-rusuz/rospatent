@@ -28,7 +28,8 @@ class Detail extends StatelessWidget {
         slivers: [
           SliverAppBar(
             leading: IconButton(
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).pop(true),
+              //TODO: Русик проверь
               icon: const Icon(Icons.arrow_back_ios_new_rounded),
             ),
             title: Text(
