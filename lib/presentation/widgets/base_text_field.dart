@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../providers/style.dart';
+
 class BaseTextField extends StatelessWidget {
   final EdgeInsets padding;
   final TextEditingController? controller;
@@ -21,35 +23,7 @@ class BaseTextField extends StatelessWidget {
     return Padding(
       padding: padding,
       child: Container(
-        decoration: const BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.06),
-              blurRadius: 60,
-              offset: Offset(0, 60),
-            ),
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.0413989),
-              blurRadius: 20,
-              offset: Offset(0, 20),
-            ),
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.0333774),
-              blurRadius: 10,
-              offset: Offset(0, 10),
-            ),
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.0266226),
-              blurRadius: 5,
-              offset: Offset(0, 5),
-            ),
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.0186011),
-              blurRadius: 2,
-              offset: Offset(0, 2),
-            ),
-          ],
-        ),
+        decoration: const BoxDecoration(boxShadow: Styles.shadows),
         child: TextField(
           controller: controller,
           decoration: InputDecoration(

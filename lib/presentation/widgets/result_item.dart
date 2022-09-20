@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../data/model/hit.dart';
 import '../pages/detail/detail_page.dart';
+import '../providers/style.dart';
 import 'highlighted_text.dart';
 
 class ResultItem extends StatelessWidget {
@@ -27,33 +28,7 @@ class ResultItem extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
-            boxShadow: const [
-              BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.06),
-                blurRadius: 60,
-                offset: Offset(0, 60),
-              ),
-              BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.0413989),
-                blurRadius: 20,
-                offset: Offset(0, 20),
-              ),
-              BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.0333774),
-                blurRadius: 10,
-                offset: Offset(0, 10),
-              ),
-              BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.0266226),
-                blurRadius: 5,
-                offset: Offset(0, 5),
-              ),
-              BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.0186011),
-                blurRadius: 2,
-                offset: Offset(0, 2),
-              ),
-            ],
+            boxShadow: Styles.shadows,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

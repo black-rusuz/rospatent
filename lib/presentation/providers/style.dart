@@ -27,4 +27,32 @@ class Styles {
     700: Color(0xFFBDD4FF),
   });
   static const int _blueAccentValue = 0xFFFFFFFF;
+
+  static const List<BoxShadow> shadows = [
+    BoxShadow(
+      color: Color.fromRGBO(0, 0, 0, 0.06),
+      blurRadius: 60,
+      offset: Offset(0, 60),
+    ),
+    BoxShadow(
+      color: Color.fromRGBO(0, 0, 0, 0.0413989),
+      blurRadius: 20,
+      offset: Offset(0, 20),
+    ),
+    BoxShadow(
+      color: Color.fromRGBO(0, 0, 0, 0.0333774),
+      blurRadius: 10,
+      offset: Offset(0, 10),
+    ),
+    BoxShadow(
+      color: Color.fromRGBO(0, 0, 0, 0.0266226),
+      blurRadius: 5,
+      offset: Offset(0, 5),
+    ),
+    BoxShadow(
+      color: Color.fromRGBO(0, 0, 0, 0.0186011),
+      blurRadius: 2,
+      offset: Offset(0, 2),
+    ),
+  ];
 }
