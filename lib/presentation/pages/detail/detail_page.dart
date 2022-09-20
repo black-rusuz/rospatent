@@ -34,7 +34,7 @@ class _DetailAppBar extends StatelessWidget {
   final Hit item;
   final TextStyle bold;
 
-  const _DetailAppBar({super.key, required this.item, required this.bold});
+  const _DetailAppBar({required this.item, required this.bold});
 
   String get title =>
       'Документ ${item.common.publishingOffice} ${item.common.documentNumber.replaceAll('00000', '')} ${item.common.kind}';
@@ -60,7 +60,6 @@ class _DetailSliverList extends StatelessWidget {
   final TextStyle normal;
 
   const _DetailSliverList({
-    super.key,
     required this.item,
     required this.bold,
     required this.normal,
@@ -137,7 +136,25 @@ class _DetailSliverList extends StatelessWidget {
                 ),
               ]),
               const SizedBox(height: 5),
-              Text(info.description, style: normal),
+              const Text('Реферат'),
+              const SizedBox(height: 8),
+              Html(
+                data: info.description,
+                style: {
+                  'em': Style(
+                    backgroundColor: const Color(0xfffaff00),
+                    fontStyle: FontStyle.normal,
+                  ),
+                  '*:not(em)': Style(
+                    color: Styles.primary,
+                    fontSize: const FontSize(12),
+                  ),
+                  'body': Style(
+                    margin: EdgeInsets.zero,
+                    padding: EdgeInsets.zero,
+                  ),
+                },
+              ),
             ],
           ),
         ),
