@@ -41,10 +41,7 @@ class _HomePageState extends State<HomePage> {
                   controller: controller,
                   placeholder: 'Что вы ищите?',
                   icon: Icon(Icons.search),
-                ),
-                ElevatedButton(
                   onPressed: search,
-                  child: const Text('Search'),
                 ),
               ],
             ),
