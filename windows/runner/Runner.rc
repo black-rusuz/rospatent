@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "team.choodoo" "\0"
-            VALUE "FileDescription", "rospatent" "\0"
+            VALUE "FileDescription", "Роспатент" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "rospatent" "\0"
+            VALUE "InternalName", "Роспатент" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 team.choodoo. All rights reserved." "\0"
             VALUE "OriginalFilename", "rospatent.exe" "\0"
-            VALUE "ProductName", "rospatent" "\0"
+            VALUE "ProductName", "Роспатент" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
