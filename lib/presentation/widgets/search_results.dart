@@ -22,14 +22,18 @@ class SearchResults extends StatelessWidget {
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
       child: ListView(
         children: [
-          Text(
-            'Всего найдено: ${results.length}',
-            style: GoogleFonts.ptSans(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-                color: Style.primary),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Text(
+              'Всего найдено: ${results.length}',
+              style: GoogleFonts.ptSans(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Style.primary),
+            ),
           ),
           //TODO: Выводи в тексте total
+          const SizedBox(height: 17),
           ...results.map(mapResults).toList()
         ],
       ),
