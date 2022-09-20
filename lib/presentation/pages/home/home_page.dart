@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   controller: controller,
                   placeholder: 'Что вы ищите?',
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: search,
                 ),
                 Padding(
