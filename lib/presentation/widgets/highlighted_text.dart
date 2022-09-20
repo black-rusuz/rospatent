@@ -5,9 +5,21 @@ import '../providers/style.dart';
 
 class HighlightedText extends StatelessWidget {
   final String data;
+  final double? fontSize;
+  final FontWeight? fontWeight;
   final Color? textColor;
+  final TextAlign? textAlign;
 
-  const HighlightedText(this.data, {super.key, this.textColor});
+  const HighlightedText(
+    this.data, {
+    super.key,
+    this.fontSize,
+    this.fontWeight,
+    this.textColor,
+    this.textAlign,
+  });
+
+  FontSize? get size => fontSize != null ? FontSize(fontSize) : null;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +31,14 @@ class HighlightedText extends StatelessWidget {
           fontStyle: FontStyle.normal,
         ),
         '*:not(em)': Style(
-          fontWeight: FontWeight.bold,
           color: textColor ?? Styles.primary,
+          fontSize: size,
+          fontWeight: fontWeight,
         ),
         'body': Style(
           margin: EdgeInsets.zero,
           padding: EdgeInsets.zero,
-          textAlign: TextAlign.center,
+          textAlign: textAlign,
         ),
       },
     );

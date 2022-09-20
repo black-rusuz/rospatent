@@ -66,7 +66,11 @@ class _DetailSliverList extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             children: [
-              HighlightedText(snippet.title),
+              HighlightedText(
+                snippet.title,
+                fontWeight: FontWeight.bold,
+                textAlign: TextAlign.center,
+              ),
               const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,7 +106,7 @@ class _DetailSliverList extends StatelessWidget {
               const SizedBox(height: 5),
               const Text('Реферат'),
               const SizedBox(height: 8),
-              HighlightedText(snippet.description),
+              HighlightedText(snippet.description, fontSize: 12),
             ],
           ),
         ),
