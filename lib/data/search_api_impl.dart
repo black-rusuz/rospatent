@@ -41,11 +41,11 @@ class SearchApiImpl implements SearchApi {
   @override
   Future<SearchResponse> search(String pattern) async {
     final timer = Stopwatch()..start();
-    late final data;
+    late final Map<String, dynamic> data;
     if (!debugMode) {
       final response = await client.post('$url/search', data: {'q': pattern});
       data = response.data;
-      print(response.statusCode);
+      debugPrint('HTTP: ${response.statusCode}');
     } else {
       final json = await rootBundle.loadString('assets/json/response.json');
       data = jsonDecode(json);
