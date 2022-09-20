@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../data/model/hit.dart';
 import '../pages/home/bloc/home_bloc.dart';
@@ -19,7 +20,19 @@ class SearchResults extends StatelessWidget {
       // TODO: ЗА ЭТУ ПАРАШУ РАНЬШЕ СЖИГАЛИ
       backgroundColor: Style.background,
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
-      child: ListView(children: results.map(mapResults).toList()),
+      child: ListView(
+        children: [
+          Text(
+            'Всего найдено: ${results.length}',
+            style: GoogleFonts.ptSans(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: Style.primary),
+          ),
+          //TODO: Выводи в тексте total
+          ...results.map(mapResults).toList()
+        ],
+      ),
     );
   }
 }
