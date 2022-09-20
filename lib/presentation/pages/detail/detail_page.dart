@@ -32,7 +32,7 @@ class Detail extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_ios_new_rounded),
             ),
             title: Text(
-              'Документ ${item.common.publishingOffice} ${item.common.docNumber} ${item.common.kind}',
+              'Документ ${item.common.publishingOffice} ${item.common.documentNumber} ${item.common.kind}',
               style: GoogleFonts.ptSans(
                   fontSize: 14,
                   color: Style.primary,

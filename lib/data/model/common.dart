@@ -5,7 +5,7 @@ import 'common_priority.dart';
 
 class Common {
   final String publishingOffice;
-  final String docNumber;
+  final String documentNumber;
   final String kind;
   final String publicationDate;
   final List<CommonPriority> priority;
@@ -16,7 +16,7 @@ class Common {
 
   Common({
     required this.publishingOffice,
-    required this.docNumber,
+    required this.documentNumber,
     required this.kind,
     required this.publicationDate,
     required this.priority,
@@ -27,9 +27,10 @@ class Common {
   });
 
   factory Common.fromJson(Map<String, dynamic> json) {
+    print(json['document_number']);
     return Common(
       publishingOffice: json['publishing_office'] ?? '',
-      docNumber: json['doc_number'] ?? '',
+      documentNumber: json['document_number'] ?? '',
       kind: json['kind'] ?? '',
       publicationDate: json['publication_date'] ?? '',
       priority: (json['priority'] ?? [])
