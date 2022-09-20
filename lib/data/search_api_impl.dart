@@ -11,15 +11,6 @@ import 'model/search_response.dart';
 // TODO: это тоже нахуй, но можно ебануть ещё один env
 const bool debugMode = false;
 
-// TODO: нахуй оно тут?
-class Print {
-  static void json(Object? json) {
-    const JsonEncoder encoder = JsonEncoder.withIndent('  ');
-    final String output = encoder.convert(json);
-    debugPrint(output);
-  }
-}
-
 @Singleton(as: SearchApi)
 class SearchApiImpl implements SearchApi {
   final Dio client;
@@ -50,7 +41,7 @@ class SearchApiImpl implements SearchApi {
       final json = await rootBundle.loadString('assets/json/response.json');
       data = jsonDecode(json);
     }
-    // Print.json(data);
+    //JsonPrint(data);
     final model = SearchResponse.fromJson(data);
     debugPrint('LOAD TIME: ${timer.elapsed}');
     return model;
