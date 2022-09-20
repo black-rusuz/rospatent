@@ -10,7 +10,7 @@ class Common {
   final String publicationDate;
   final List<CommonPriority> priority;
   final CommonApplication application;
-  final ClassificationIpc classification;
+  final List<Classification> classification;
   final String familyId;
   final List<CommonCitated> citatedDocs;
 
@@ -27,6 +27,7 @@ class Common {
   });
 
   factory Common.fromJson(Map<String, dynamic> json) {
+    final Map<String, dynamic> classifications = json['classification'] ?? {};
     return Common(
       publishingOffice: json['publishing_office'] ?? '',
       documentNumber: json['document_number'] ?? '',
@@ -37,7 +38,10 @@ class Common {
           .whereType<CommonPriority>()
           .toList(),
       application: CommonApplication.fromJson(json['application']),
-      classification: ClassificationIpc.fromJson(json['classification']),
+      classification: classifications.values
+          .map((e) => Classification.fromJson(e))
+          .whereType<Classification>()
+          .toList(),
       familyId: json['family']?['docdb_family_id'] ?? '',
       citatedDocs: (json['citated_docs'] ?? [])
           .map((e) => CommonCitated.fromJson(e))

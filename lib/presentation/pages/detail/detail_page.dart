@@ -72,7 +72,7 @@ class _DetailSliverList extends StatelessWidget {
 
   String get docNum => item.common.documentNumber.replaceAll('00000', '');
 
-  String get mpk => item.common.classification.fullName;
+  String get mpk => info.classification;
 
   String get kind => item.common.kind;
 

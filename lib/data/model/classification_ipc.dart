@@ -1,4 +1,4 @@
-class ClassificationIpc {
+class Classification {
   final int mainGroup;
   final String classificationValue;
   final int subgroup;
@@ -7,7 +7,7 @@ class ClassificationIpc {
   final String fullName;
   final int classNum;
 
-  ClassificationIpc({
+  Classification({
     required this.mainGroup,
     required this.classificationValue,
     required this.subgroup,
@@ -17,11 +17,8 @@ class ClassificationIpc {
     required this.classNum,
   });
 
-  factory ClassificationIpc.fromJson(Map<String, dynamic> json) {
-    if (json.runtimeType is Map) {
-      json = json['ipc'];
-    }
-    return ClassificationIpc(
+  factory Classification.fromJson(Map<String, dynamic> json) {
+    return Classification(
       mainGroup: int.tryParse(json['main_group'] ?? '') ?? 0,
       classificationValue: json['classification_value'] ?? '',
       subgroup: int.tryParse(json['subgroup'] ?? '') ?? 0,

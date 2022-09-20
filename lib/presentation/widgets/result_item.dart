@@ -77,7 +77,7 @@ class ResultItem extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                'МПК ${item.snippet.classification.toString()}',
+                'МПК ${item.snippet.classification}',
                 style: textStyle,
               ),
               const SizedBox(height: 4),
