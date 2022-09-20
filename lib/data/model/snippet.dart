@@ -4,7 +4,8 @@ class Snippet {
   final String lang;
   final String applicant;
   final String inventor;
-  final classification;
+  final String patentee;
+  final String classification;
 
   Snippet({
     required this.title,
@@ -12,17 +13,20 @@ class Snippet {
     required this.lang,
     required this.applicant,
     required this.inventor,
+    required this.patentee,
     required this.classification,
   });
 
   factory Snippet.fromJson(Map<String, dynamic> json) {
     return Snippet(
-      title: json['title'],
-      description: json['description'],
-      lang: json['lang'],
+      title: json['title'] ?? '',
+      description: json['description'] ?? '',
+      lang: json['lang'] ?? '',
       applicant: json['applicant'] ?? '',
       inventor: json['inventor'] ?? '',
-      classification: json['classification'],
+      patentee: json['patentee'] ?? '',
+      // TODO: может быть помимо ipc cpc наверн
+      classification: json['classification']['ipc'],
     );
   }
 }
