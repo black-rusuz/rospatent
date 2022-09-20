@@ -26,7 +26,7 @@ class ResultItem extends StatelessWidget {
         onTap: () => Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => Detail(item: item))),
         child: Ink(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(5),
@@ -45,10 +45,14 @@ class ResultItem extends StatelessWidget {
                   '*:not(em)': Style(
                     fontWeight: FontWeight.bold,
                     color: const Color.fromRGBO(0, 84, 166, 1),
-                  )
+                  ),
+                  'body':
+                      Style(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
                 },
               ),
-              Text('МПК ${item.snippet.classification.toString()}', style: textStyle),
+              const SizedBox(height: 10),
+              Text('МПК ${item.snippet.classification.toString()}',
+                  style: textStyle),
               const SizedBox(height: 4),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +68,8 @@ class ResultItem extends StatelessWidget {
                 children: [
                   const Icon(Icons.people_alt, size: 15),
                   const SizedBox(width: 5),
-                  Expanded(child: Text(item.snippet.applicant, style: textStyle)),
+                  Expanded(
+                      child: Text(item.snippet.applicant, style: textStyle)),
                 ],
               ),
               const SizedBox(height: 4),
@@ -73,7 +78,8 @@ class ResultItem extends StatelessWidget {
                 children: [
                   const Icon(Icons.person, size: 15),
                   const SizedBox(width: 5),
-                  Expanded(child: Text(item.snippet.inventor, style: textStyle)),
+                  Expanded(
+                      child: Text(item.snippet.inventor, style: textStyle)),
                 ],
               ),
             ],
