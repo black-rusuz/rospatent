@@ -12,10 +12,11 @@ class HomeInitial extends HomeState {}
 class HomeLoading extends HomeState {}
 
 class HomeResults extends HomeState {
+  final int total;
   final List<Hit> results;
 
-  const HomeResults({required this.results});
+  const HomeResults({required this.total, required this.results});
 
   @override
-  List<Object> get props => [...results];
+  List<Object> get props => [total, ...results];
 }

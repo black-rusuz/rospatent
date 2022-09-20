@@ -8,9 +8,9 @@ import '../providers/style.dart';
 import 'result_item.dart';
 
 class SearchResults extends StatelessWidget {
-  final List<Hit> results;
+  final HomeResults state;
 
-  const SearchResults({super.key, required this.results});
+  const SearchResults(this.state, {super.key});
 
   Widget mapResults(Hit item) => ResultItem(item: item);
 
@@ -22,20 +22,31 @@ class SearchResults extends StatelessWidget {
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
       child: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            child: Text(
-              'Всего найдено: ${results.length}',
-              style: GoogleFonts.ptSans(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  color: Style.primary),
-            ),
-          ),
-          //TODO: Выводи в тексте total
-          const SizedBox(height: 17),
-          ...results.map(mapResults).toList()
+          ResultsFound(state.total),
+          const SizedBox(height: 15),
+          ...state.results.map(mapResults).toList()
         ],
+      ),
+    );
+  }
+}
+
+class ResultsFound extends StatelessWidget {
+  final int total;
+
+  const ResultsFound(this.total, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: Text(
+        'Всего найдено: $total',
+        style: GoogleFonts.ptSans(
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+          color: Style.primary,
+        ),
       ),
     );
   }

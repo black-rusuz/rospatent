@@ -20,7 +20,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(HomeLoading());
     try {
       final response = await _api.search(event.pattern);
-      emit(HomeResults(results: response.hits));
+      emit(HomeResults(total: response.total, results: response.hits));
     } on Exception {
       emit(HomeInitial());
     }

@@ -59,9 +59,7 @@ class BaseTextField extends StatelessWidget {
             suffixIcon: IconButton(icon: icon, onPressed: onPressed),
             border: const OutlineInputBorder(
               borderSide: BorderSide.none,
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
           ),
         ),

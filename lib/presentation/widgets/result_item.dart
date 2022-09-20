@@ -22,7 +22,6 @@ class ResultItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(25, 0, 25, 15),
       child: InkWell(
-        // TODO: onTap
         onTap: () => Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => Detail(item: item))),
         child: Ink(
@@ -39,20 +38,24 @@ class ResultItem extends StatelessWidget {
                 data: item.snippet.title,
                 style: {
                   'em': Style(
-                    backgroundColor: Colors.yellowAccent,
+                    backgroundColor: const Color(0xfffaff00),
                     fontStyle: FontStyle.normal,
                   ),
                   '*:not(em)': Style(
                     fontWeight: FontWeight.bold,
                     color: const Color.fromRGBO(0, 84, 166, 1),
                   ),
-                  'body':
-                      Style(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
+                  'body': Style(
+                    margin: EdgeInsets.zero,
+                    padding: EdgeInsets.zero,
+                  ),
                 },
               ),
               const SizedBox(height: 10),
-              Text('МПК ${item.snippet.classification.toString()}',
-                  style: textStyle),
+              Text(
+                'МПК ${item.snippet.classification.toString()}',
+                style: textStyle,
+              ),
               const SizedBox(height: 4),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +72,8 @@ class ResultItem extends StatelessWidget {
                   const Icon(Icons.people_alt, size: 15),
                   const SizedBox(width: 5),
                   Expanded(
-                      child: Text(item.snippet.applicant, style: textStyle)),
+                    child: Text(item.snippet.applicant, style: textStyle),
+                  ),
                 ],
               ),
               const SizedBox(height: 4),
@@ -79,7 +83,8 @@ class ResultItem extends StatelessWidget {
                   const Icon(Icons.person, size: 15),
                   const SizedBox(width: 5),
                   Expanded(
-                      child: Text(item.snippet.inventor, style: textStyle)),
+                    child: Text(item.snippet.inventor, style: textStyle),
+                  ),
                 ],
               ),
             ],

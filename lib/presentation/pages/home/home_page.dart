@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../providers/style.dart';
 import '../../widgets/base_text_field.dart';
+import '../../widgets/home_info.dart';
 import '../../widgets/loader.dart';
 import '../../widgets/search_results.dart';
 import 'bloc/home_bloc.dart';
@@ -16,18 +16,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final controller = TextEditingController();
+  final controller = TextEditingController(text: 'Лампа');
 
-  //TODO:
-  void search() => context.read<HomeBloc>().add(const HomeSearch('Лампа'));
-
-  TextStyle get textStyle => GoogleFonts.ptSans(
-      fontSize: 12, fontWeight: FontWeight.bold, color: Style.primary);
-
-  String get firstPart =>
-      'Предоставляется возможность проведения поиска по мировому патентному фонду включающему';
-  String get secondPart =>
-      'стран и организаций, в том числе все доступные русскоязычные массивы';
+  void search() => context.read<HomeBloc>().add(HomeSearch(controller.text));
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +30,7 @@ class _HomePageState extends State<HomePage> {
             return const Loader();
           }
           if (state is HomeResults) {
-            return SearchResults(results: state.results);
+            return SearchResults(state);
           }
           return Center(
             child: Column(
@@ -52,23 +43,7 @@ class _HomePageState extends State<HomePage> {
                   icon: const Icon(Icons.search),
                   onPressed: search,
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(firstPart, style: textStyle),
-                      Text('26',
-                          style: GoogleFonts.ptSans(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
-                              color: Style.accent)),
-                      Text(secondPart, style: textStyle),
-                    ],
-                  ),
-                )
+                const HomeInfo(),
               ],
             ),
           );
