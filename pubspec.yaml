@@ -34,3 +34,17 @@ flutter:
     - assets/json/response.json
 
   uses-material-design: true
+
+flutter_icons:
+  image_path: 'assets/img/icon.png'
+  adaptive_icon_background: '#002558'
+  adaptive_icon_foreground: 'assets/img/icon_foreground.png'
+  android: true
+  ios: true
+  web:
+    generate: true
+  windows:
+    generate: true
+
+flutter_native_splash:
+  background_image: 'assets/img/splash.png'
