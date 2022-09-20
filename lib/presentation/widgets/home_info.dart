@@ -8,11 +8,10 @@ class HomeInfo extends StatelessWidget {
   static const TextStyle text = TextStyle(
     color: Styles.primary,
     fontSize: 12,
-    fontWeight: FontWeight.bold,
   );
 
   static const TextStyle number = TextStyle(
-    color: Styles.blue,
+    color: Styles.accent,
     fontSize: 20,
     fontWeight: FontWeight.bold,
     fontStyle: FontStyle.italic,
