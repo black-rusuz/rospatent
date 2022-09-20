@@ -27,7 +27,6 @@ class Common {
   });
 
   factory Common.fromJson(Map<String, dynamic> json) {
-    print(json['document_number']);
     return Common(
       publishingOffice: json['publishing_office'] ?? '',
       documentNumber: json['document_number'] ?? '',
