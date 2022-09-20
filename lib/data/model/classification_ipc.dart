@@ -1,32 +1,34 @@
-class ClassificationIpc{
-  final int main_group;
-  final String classification_value;
+class ClassificationIpc {
+  final int mainGroup;
+  final String classificationValue;
   final int subgroup;
   final String subclass;
   final String section;
-  final String fullname;
-  final int class_num;
+  final String fullName;
+  final int classNum;
 
   ClassificationIpc({
-    required this.main_group,
-    required this.classification_value,
+    required this.mainGroup,
+    required this.classificationValue,
     required this.subgroup,
     required this.subclass,
     required this.section,
-    required this.fullname,
-    required this.class_num,
+    required this.fullName,
+    required this.classNum,
   });
 
-  factory ClassificationIpc.fromJSON(Map<String, dynamic> json){
-    json = json['ipc'];
+  factory ClassificationIpc.fromJson(Map<String, dynamic> json) {
+    if (json.runtimeType is Map) {
+      json = json['ipc'];
+    }
     return ClassificationIpc(
-        main_group: json['main_group'] ?? '',
-        classification_value: json['classification_value'] ?? '',
-        subgroup: json['subgroup'] ?? '',
-        subclass: json['subclass'] ?? '',
-        section: json['section'] ?? '',
-        fullname: json['fullname'] ?? '',
-        class_num: json['class_num'] ?? '',
+      mainGroup: int.tryParse(json['main_group'] ?? '') ?? 0,
+      classificationValue: json['classification_value'] ?? '',
+      subgroup: int.tryParse(json['subgroup'] ?? '') ?? 0,
+      subclass: json['subclass'] ?? '',
+      section: json['section'] ?? '',
+      fullName: json['fullname'] ?? '',
+      classNum: int.tryParse(json['class_num'] ?? '') ?? 0,
     );
   }
 }

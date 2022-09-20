@@ -1,11 +1,11 @@
-class Drawings{
+class Drawing {
   final String url;
   final int width;
   final int height;
   final String format;
   final String content;
 
-  Drawings({
+  Drawing({
     required this.url,
     required this.width,
     required this.height,
@@ -13,11 +13,11 @@ class Drawings{
     required this.content,
   });
 
-  factory Drawings.fromJSON(Map<String, dynamic> json){
-    return Drawings(
+  factory Drawing.fromJson(Map<String, dynamic> json) {
+    return Drawing(
       url: json['url'] ?? '',
-      width: json['width'] ?? '',
-      height: json['height'] ?? '',
+      width: int.tryParse(json['width'] ?? '') ?? 0,
+      height: int.tryParse(json['height'] ?? '') ?? 0,
       format: json['format'] ?? '',
       content: json['content'] ?? '',
     );

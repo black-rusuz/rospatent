@@ -25,7 +25,8 @@ class Snippet {
       applicant: json['applicant'] ?? '',
       inventor: json['inventor'] ?? '',
       patentee: json['patentee'] ?? '',
-      classification: json['classification']['ipc'], //может быть помимо ipc cpc наверн
+      // TODO: может быть помимо ipc cpc наверн
+      classification: json['classification']['ipc'],
     );
   }
 }

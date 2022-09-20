@@ -1,19 +1,19 @@
-class CommonPriority{
+class CommonPriority {
   final String number;
   final String country;
-  final String filing_date;
+  final String filingDate;
 
   CommonPriority({
     required this.number,
     required this.country,
-    required this.filing_date,
+    required this.filingDate,
   });
 
-  factory CommonPriority.fromJSON(Map<String, dynamic> json){
+  factory CommonPriority.fromJson(Map<String, dynamic> json) {
     return CommonPriority(
-        number: json['number'] ?? '',
-        country: json['country'] ?? '',
-        filing_date: json['filing_date'] ?? '',
+      number: json['number'] ?? '',
+      country: json['country'] ?? '',
+      filingDate: json['filing_date'] ?? '',
     );
   }
 }

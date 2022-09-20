@@ -1,19 +1,19 @@
-class CommonCitated{
+class CommonCitated {
   final String identity;
-  final int publication_date;
+  final int publicationDate;
   final String id;
 
   CommonCitated({
     required this.identity,
-    required this.publication_date,
+    required this.publicationDate,
     required this.id,
   });
 
-  factory CommonCitated.fromJSON(Map<String, dynamic> json){
+  factory CommonCitated.fromJson(Map<String, dynamic> json) {
     return CommonCitated(
-        identity: json['identity'] ?? '',
-        publication_date: json['publication_date'] ?? '',
-        id: json['id'] ?? '',
+      identity: json['identity'] ?? '',
+      publicationDate: json['publication_date'] ?? '',
+      id: json['id'] ?? '',
     );
   }
 }

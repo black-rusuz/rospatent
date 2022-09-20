@@ -1,6 +1,6 @@
 import 'citations_parsed_doc.dart';
 
-class CitationsParsed{
+class CitationsParsed {
   final String text;
   final CitationsParsedDoc doc;
 
@@ -9,10 +9,10 @@ class CitationsParsed{
     required this.doc,
   });
 
-  factory CitationsParsed.fromJSON(Map<String, dynamic> json){
+  factory CitationsParsed.fromJson(Map<String, dynamic> json) {
     return CitationsParsed(
-        text: json['text'] ?? '',
-        doc: CitationsParsedDoc.fromJSON(json['doc']),
+      text: json['text'] ?? '',
+      doc: CitationsParsedDoc.fromJson(json['doc']),
     );
   }
 }

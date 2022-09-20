@@ -1,43 +1,45 @@
-import 'common_appliaction.dart';
-import 'common_priority.dart';
 import 'classification_ipc.dart';
+import 'common_appliaction.dart';
 import 'common_citated.dart';
+import 'common_priority.dart';
 
-class Common{
-  final String publishing_office;
-  final int doc_number;
+class Common {
+  final String publishingOffice;
+  final int docNumber;
   final String kind;
-  final String publication_date;
+  final String publicationDate;
   final CommonPriority priority;
   final CommonApplication application;
   final ClassificationIpc classification;
-  final String family_id;
-  final List<CommonCitated> citated_docs;
+  final String familyId;
+  final List<CommonCitated> citatedDocs;
 
   Common({
-    required this.publishing_office,
-    required this.doc_number,
+    required this.publishingOffice,
+    required this.docNumber,
     required this.kind,
-    required this.publication_date,
+    required this.publicationDate,
     required this.priority,
     required this.application,
     required this.classification,
-    required this.family_id,
-    required this.citated_docs,
+    required this.familyId,
+    required this.citatedDocs,
   });
 
-  factory Common.fromJSON(Map<String, dynamic> json){
-    json = json['common'];
+  factory Common.fromJson(Map<String, dynamic> json) {
     return Common(
-      publishing_office: json['publishing_office'] ?? '',
-      doc_number: json['doc_number'] ?? '',
+      publishingOffice: json['publishing_office'] ?? '',
+      docNumber: int.tryParse(json['doc_number'] ?? '') ?? 0,
       kind: json['kind'] ?? '',
-      publication_date: json['publication_date'] ?? '',
-      priority: CommonPriority.fromJSON(json['priority']),
-      application: CommonApplication.fromJSON(json['application']),
-      classification: ClassificationIpc.fromJSON(json['classification']),
-      family_id: json['family']['docdb_family_id'] ?? '',
-      citated_docs: (json['citated_docs'] as List).map((e) => CommonCitated.fromJSON(e)).toList(),
+      publicationDate: json['publication_date'] ?? '',
+      priority: CommonPriority.fromJson(json['priority'] ?? {}),
+      application: CommonApplication.fromJson(json['application']),
+      classification: ClassificationIpc.fromJson(json['classification']),
+      familyId: json['family']?['docdb_family_id'] ?? '',
+      citatedDocs: (json['citated_docs'] ?? [])
+          .map((e) => CommonCitated.fromJson(e))
+          .whereType<CommonCitated>()
+          .toList(),
     );
   }
 }

@@ -1,13 +1,14 @@
-import 'meta_source.dart';
-import 'snippet.dart';
+import 'biblio_ru.dart';
 import 'common.dart';
 import 'drawings.dart';
+import 'meta_source.dart';
+import 'snippet.dart';
 
 class Hit {
   final Common common;
   final MetaSource meta;
-  final biblio;
-  final Drawings drawings;
+  final BiblioRu biblio;
+  final List<Drawing> drawings;
   final String id;
   final String index;
   final String dataset;
@@ -30,10 +31,13 @@ class Hit {
 
   factory Hit.fromJson(Map<String, dynamic> json) {
     return Hit(
-      common: Common.fromJSON(json['common']),
+      common: Common.fromJson(json['common']),
       meta: MetaSource.fromJson(json['meta']),
-      biblio: json['biblio'],
-      drawings: Drawings.fromJSON(json['drawings']),
+      biblio: BiblioRu.fromJson(json['biblio']),
+      drawings: (json['drawings'] ?? [])
+          .map((e) => Drawing.fromJson(e))
+          .whereType<Drawing>()
+          .toList(),
       id: json['id'],
       index: json['index'],
       dataset: json['dataset'],

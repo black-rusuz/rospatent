@@ -1,16 +1,16 @@
-class CommonApplication{
+class CommonApplication {
   final String number;
-  final String filing_date;
+  final String filingDate;
 
   CommonApplication({
     required this.number,
-    required this.filing_date,
+    required this.filingDate,
   });
 
-  factory CommonApplication.fromJSON(Map<String, dynamic> json){
+  factory CommonApplication.fromJson(Map<String, dynamic> json) {
     return CommonApplication(
-        number: json['number'] ?? '',
-        filing_date: json['filing_date'] ?? '',
+      number: json['number'] ?? '',
+      filingDate: json['filing_date'] ?? '',
     );
   }
 }

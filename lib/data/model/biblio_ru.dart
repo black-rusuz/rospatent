@@ -1,31 +1,41 @@
 import 'citations_parsed_doc.dart';
 
-class BiblioRu{
-  final List<String> applicant_name;
+class BiblioRu {
+  final List<String> applicantName;
   final String citations;
-  final List<String> inventor_name;
+  final List<String> inventorName;
   final String title;
-  final List<String> patentee_name;
-  final List<CitationsParsedDoc> citations_parsed;
+  final List<String> patenteeName;
+  final List<CitationsParsedDoc> citationsParsed;
 
   BiblioRu({
-    required this.applicant_name,
+    required this.applicantName,
     required this.citations,
-    required this.inventor_name,
+    required this.inventorName,
     required this.title,
-    required this.patentee_name,
-    required this.citations_parsed,
+    required this.patenteeName,
+    required this.citationsParsed,
   });
 
-  factory BiblioRu.fromJSON(Map<String, dynamic> json){
-    json = json['ru'];
+  // TODO: abstract
+  factory BiblioRu.fromJson(Map<String, dynamic> json) {
+    json = json['ru']; // TODO: locale?
     return BiblioRu(
-        applicant_name: json['applicant_name'],
-        citations: json['citations'] ?? '',
-        inventor_name: (json['inventor'] as List).map((e) => json['name'].toString() ?? '').toList(),
-        title: json['title'] ?? '',
-        patentee_name: (json['patentee'] as List).map((e) => json['name'].toString() ?? '').toList(),
-        citations_parsed: (json['citations_parsed'] as List).map((e) => CitationsParsedDoc.fromJSON(e)).toList(),
+      applicantName: json['applicant_name'] ?? [],
+      citations: json['citations'] ?? '',
+      inventorName: json['inventor']
+          .map((e) => json['name'])
+          .whereType<String>()
+          .toList(),
+      title: json['title'] ?? '',
+      patenteeName: json['patentee']
+          .map((e) => json['name'])
+          .whereType<String>()
+          .toList(),
+      citationsParsed: (json['citations_parsed'] ?? [])
+          .map((e) => CitationsParsedDoc.fromJson(e))
+          .whereType<CitationsParsedDoc>()
+          .toList(),
     );
   }
 }

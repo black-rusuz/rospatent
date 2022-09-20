@@ -6,7 +6,7 @@ class Biblio {
   final List<String> patentee;
   final List<String> applicant;
   final String citations;
-  final List<CitationsParsed> citations_parsed;
+  final List<CitationsParsed> citationsParsed;
 
   Biblio({
     required this.inventor,
@@ -14,18 +14,27 @@ class Biblio {
     required this.patentee,
     required this.applicant,
     required this.citations,
-    required this.citations_parsed,
+    required this.citationsParsed,
   });
 
-  // TODO
   factory Biblio.fromJson(Map<String, dynamic> json) {
     return Biblio(
-      inventor: (json['inventor'] as List).map((e) => json['name'].toString() ?? '').toList(),
-      title: json['title'],
-      patentee: (json['patentee'] as List).map((e) => json['name'].toString() ?? '').toList(),
-      applicant: (json['applicant'] as List).map((e) => json['name'].toString() ?? '').toList(),
-      citations: json['citations'],
-      citations_parsed: (json['citations_parsed'] as List).map((e) => CitationsParsed.fromJSON(e)).toList()
-    );
+        inventor: json['inventor']
+            .map((e) => json['name'])
+            .whereType<String>()
+            .toList(),
+        title: json['title'],
+        patentee: json['patentee']
+            .map((e) => json['name'])
+            .whereType<String>()
+            .toList(),
+        applicant: json['applicant']
+            .map((e) => json['name'])
+            .whereType<String>()
+            .toList(),
+        citations: json['citations'],
+        citationsParsed: json['citations_parsed']
+            .map((e) => CitationsParsed.fromJson(e))
+            .toList());
   }
 }

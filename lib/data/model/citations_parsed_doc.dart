@@ -1,25 +1,24 @@
-class CitationsParsedDoc{
-  final int doc_number;
-  final String publishing_office;
+class CitationsParsedDoc {
+  final int docNumber;
+  final String publishingOffice;
   final String kind;
-  final String publication_date;
+  final String publicationDate;
   final String identity;
 
-  CitationsParsedDoc({
-    required this.doc_number,
-    required this.publishing_office,
-    required this.kind,
-    required this.publication_date,
-    required this.identity
-  });
+  CitationsParsedDoc(
+      {required this.docNumber,
+      required this.publishingOffice,
+      required this.kind,
+      required this.publicationDate,
+      required this.identity});
 
-  factory CitationsParsedDoc.fromJSON(Map<String, dynamic> json){
+  factory CitationsParsedDoc.fromJson(Map<String, dynamic> json) {
     return CitationsParsedDoc(
-        doc_number: json['doc_number'] ?? '',
-        publishing_office: json['publishing_office'] ?? '',
-        kind: json['kind'] ?? '',
-        publication_date: json['publication_date'] ?? '',
-        identity: json['identity'] ?? '',
+      docNumber: int.tryParse(json['doc_number'] ?? '') ?? 0,
+      publishingOffice: json['publishing_office'] ?? '',
+      kind: json['kind'] ?? '',
+      publicationDate: json['publication_date'] ?? '',
+      identity: json['identity'] ?? '',
     );
   }
 }
