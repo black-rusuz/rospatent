@@ -8,7 +8,7 @@ class Common {
   final int docNumber;
   final String kind;
   final String publicationDate;
-  final CommonPriority priority;
+  final List<CommonPriority> priority;
   final CommonApplication application;
   final ClassificationIpc classification;
   final String familyId;
@@ -32,7 +32,10 @@ class Common {
       docNumber: int.tryParse(json['doc_number'] ?? '') ?? 0,
       kind: json['kind'] ?? '',
       publicationDate: json['publication_date'] ?? '',
-      priority: CommonPriority.fromJson(json['priority'] ?? {}),
+      priority: (json['priority'] ?? [])
+          .map((e) => CommonPriority.fromJson(e))
+          .whereType<CommonPriority>()
+          .toList(),
       application: CommonApplication.fromJson(json['application']),
       classification: ClassificationIpc.fromJson(json['classification']),
       familyId: json['family']?['docdb_family_id'] ?? '',

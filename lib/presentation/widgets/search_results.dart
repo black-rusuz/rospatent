@@ -17,8 +17,8 @@ class SearchResults extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      // TODO: ЗА ЭТУ ПАРАШУ РАНЬШЕ СЖИГАЛИ
       backgroundColor: Style.background,
+      // TODO: ЗА ЭТУ ПАРАШУ РАНЬШЕ СЖИГАЛИ
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
       child: ListView(
         children: [
