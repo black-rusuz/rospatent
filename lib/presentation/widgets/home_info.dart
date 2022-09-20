@@ -6,13 +6,13 @@ class HomeInfo extends StatelessWidget {
   const HomeInfo({super.key});
 
   static const TextStyle text = TextStyle(
-    color: Style.primary,
+    color: Styles.primary,
     fontSize: 12,
     fontWeight: FontWeight.bold,
   );
 
   static const TextStyle number = TextStyle(
-    color: Style.blue,
+    color: Styles.blue,
     fontSize: 20,
     fontWeight: FontWeight.bold,
     fontStyle: FontStyle.italic,

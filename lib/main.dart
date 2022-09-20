@@ -25,12 +25,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rospatent',
       theme: ThemeData(
-        primarySwatch: Style.blue,
+        primarySwatch: Styles.blue,
         appBarTheme: const AppBarTheme(
           color: Colors.transparent,
-          iconTheme: IconThemeData(color: Style.secondary),
+          iconTheme: IconThemeData(color: Styles.secondary),
         ),
-        iconTheme: const IconThemeData(color: Style.secondary),
+        iconTheme: const IconThemeData(color: Styles.secondary),
         textTheme: GoogleFonts.ptSansTextTheme(),
       ),
       home: BlocProvider<HomeBloc>(

@@ -16,7 +16,7 @@ class SearchResults extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      backgroundColor: Style.background,
+      backgroundColor: Styles.background,
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
       child: ListView(
         children: [
@@ -43,7 +43,7 @@ class ResultsFound extends StatelessWidget {
         style: const TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.bold,
-          color: Style.primary,
+          color: Styles.primary,
         ),
       ),
     );
