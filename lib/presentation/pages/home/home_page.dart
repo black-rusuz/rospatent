@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../providers/style.dart';
 import '../../widgets/base_text_field.dart';
 import '../../widgets/loader.dart';
 import '../../widgets/search_results.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Style.background,
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           if (state is HomeLoading) {
@@ -38,6 +39,8 @@ class _HomePageState extends State<HomePage> {
                 BaseTextField(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   controller: controller,
+                  placeholder: 'Что вы ищите?',
+                  icon: Icon(Icons.search),
                 ),
                 ElevatedButton(
                   onPressed: search,
