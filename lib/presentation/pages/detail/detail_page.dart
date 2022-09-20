@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
+import '../../widgets/highlighted_text.dart';
 
 class Detail extends StatelessWidget {
   final Hit item;
 
   const Detail({super.key, required this.item});
 
-  static const TextStyle bold = TextStyle(
-      fontSize: 12, fontWeight: FontWeight.bold, color: Styles.primary);
+  static const TextStyle bold =
+      TextStyle(fontWeight: FontWeight.bold, color: Styles.primary);
 
-  static const TextStyle normal =
-      TextStyle(fontSize: 12, color: Styles.primary);
+  static TextStyle get boldAccent => bold.copyWith(color: Styles.accent);
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +21,8 @@ class Detail extends StatelessWidget {
       backgroundColor: Styles.background,
       body: CustomScrollView(
         slivers: [
-          _DetailAppBar(item: item, bold: bold),
-          _DetailSliverList(item: item, bold: bold, normal: normal),
+          _DetailAppBar(item: item),
+          _DetailSliverList(item: item),
         ],
       ),
     );
@@ -32,9 +31,8 @@ class Detail extends StatelessWidget {
 
 class _DetailAppBar extends StatelessWidget {
   final Hit item;
-  final TextStyle bold;
 
-  const _DetailAppBar({required this.item, required this.bold});
+  const _DetailAppBar({required this.item});
 
   String get title =>
       'Документ ${item.common.publishingOffice} ${item.common.documentNumber.replaceAll('00000', '')} ${item.common.kind}';
@@ -46,115 +44,65 @@ class _DetailAppBar extends StatelessWidget {
         onPressed: () => Navigator.of(context).pop(true),
         icon: const Icon(Icons.arrow_back_ios_new_rounded),
       ),
-      title: Text(
-        title,
-        style: bold.copyWith(fontSize: 14),
-      ),
+      title: Text(title, style: Detail.bold),
     );
   }
 }
 
 class _DetailSliverList extends StatelessWidget {
   final Hit item;
-  final TextStyle bold;
-  final TextStyle normal;
 
-  const _DetailSliverList({
-    required this.item,
-    required this.bold,
-    required this.normal,
-  });
+  const _DetailSliverList({required this.item});
 
-  Snippet get info => item.snippet;
-
-  String get pubOffice => item.common.publishingOffice;
+  Snippet get snippet => item.snippet;
 
   String get docNum => item.common.documentNumber.replaceAll('00000', '');
-
-  String get mpk => info.classification;
-
-  String get kind => item.common.kind;
 
   @override
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildListDelegate([
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             children: [
-              Html(
-                data: info.title,
-                style: {
-                  'em': Style(
-                    backgroundColor: const Color(0xfffaff00),
-                    fontStyle: FontStyle.normal,
-                  ),
-                  '*:not(em)': Style(
-                    fontWeight: FontWeight.bold,
-                    color: Styles.primary,
-                  ),
-                  'body': Style(
-                    margin: EdgeInsets.zero,
-                    padding: EdgeInsets.zero,
-                    textAlign: TextAlign.center,
-                  ),
-                },
-              ),
+              HighlightedText(snippet.title),
               const SizedBox(height: 8),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                RichText(
-                  text: TextSpan(
-                    text: pubOffice,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, color: Styles.primary),
-                    children: <TextSpan>[
-                      TextSpan(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      text: item.common.publishingOffice,
+                      style: Detail.bold,
+                      children: [
+                        TextSpan(
                           text: docNum,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Styles.accent,
-                          )),
-                      TextSpan(text: kind),
-                    ],
+                          style: Detail.boldAccent,
+                        ),
+                        TextSpan(text: item.common.kind),
+                      ],
+                    ),
                   ),
-                ),
-                RichText(
-                  text: TextSpan(
-                    text: 'МПК ',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, color: Styles.primary),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: mpk,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Styles.accent,
-                          )),
-                    ],
+                  RichText(
+                    text: TextSpan(
+                      text: 'МПК',
+                      style: Detail.bold,
+                      children: [
+                        const TextSpan(text: ' '),
+                        TextSpan(
+                          text: snippet.classification,
+                          style: Detail.boldAccent,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ]),
+                ],
+              ),
               const SizedBox(height: 5),
               const Text('Реферат'),
               const SizedBox(height: 8),
-              Html(
-                data: info.description,
-                style: {
-                  'em': Style(
-                    backgroundColor: const Color(0xfffaff00),
-                    fontStyle: FontStyle.normal,
-                  ),
-                  '*:not(em)': Style(
-                    color: Styles.primary,
-                    fontSize: const FontSize(12),
-                  ),
-                  'body': Style(
-                    margin: EdgeInsets.zero,
-                    padding: EdgeInsets.zero,
-                  ),
-                },
-              ),
+              HighlightedText(snippet.description),
             ],
           ),
         ),

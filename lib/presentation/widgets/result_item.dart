@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 
 import '../../data/model/hit.dart';
 import '../pages/detail/detail_page.dart';
+import 'highlighted_text.dart';
 
 class ResultItem extends StatelessWidget {
   final Hit item;
@@ -58,22 +58,9 @@ class ResultItem extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Html(
-                data: item.snippet.title,
-                style: {
-                  'em': Style(
-                    backgroundColor: const Color(0xfffaff00),
-                    fontStyle: FontStyle.normal,
-                  ),
-                  '*:not(em)': Style(
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromRGBO(0, 84, 166, 1),
-                  ),
-                  'body': Style(
-                    margin: EdgeInsets.zero,
-                    padding: EdgeInsets.zero,
-                  ),
-                },
+              HighlightedText(
+                item.snippet.title,
+                textColor: const Color.fromRGBO(0, 84, 166, 1),
               ),
               const SizedBox(height: 10),
               Text(
