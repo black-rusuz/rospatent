@@ -20,16 +20,16 @@ class Biblio {
   factory Biblio.fromJson(Map<String, dynamic> json) {
     return Biblio(
         inventor: json['inventor']
-            .map((e) => json['name'])
+            .map((e) => e['name'])
             .whereType<String>()
             .toList(),
         title: json['title'],
         patentee: json['patentee']
-            .map((e) => json['name'])
+            .map((e) => e['name'])
             .whereType<String>()
             .toList(),
         applicant: json['applicant']
-            .map((e) => json['name'])
+            .map((e) => e['name'])
             .whereType<String>()
             .toList(),
         citations: json['citations'],

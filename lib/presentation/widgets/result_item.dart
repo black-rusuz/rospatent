@@ -11,10 +11,10 @@ class ResultItem extends StatelessWidget {
 
   const ResultItem({super.key, required this.item});
 
-  static const TextStyle style = TextStyle(
+  static const TextStyle secondary = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.bold,
-    color: Color.fromRGBO(185, 185, 197, 1),
+    color: Styles.secondary,
   );
 
   Snippet get snippet => item.snippet;
@@ -38,17 +38,17 @@ class ResultItem extends StatelessWidget {
             children: [
               HighlightedText(
                 snippet.title,
-                textColor: const Color.fromRGBO(0, 84, 166, 1),
+                textColor: Styles.blue,
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(height: 10),
-              Text('МПК ${snippet.classification}', style: style),
+              Text('МПК ${snippet.classification}', style: secondary),
               const SizedBox(height: 4),
-              Paragraph(Icons.feed_rounded, item.id),
+              IconParagraph(Icons.feed_rounded, item.id),
               const SizedBox(height: 4),
-              Paragraph(Icons.people_alt, snippet.applicant),
+              IconParagraph(Icons.people_alt, snippet.applicant),
               const SizedBox(height: 4),
-              Paragraph(Icons.person, snippet.inventor),
+              IconParagraph(Icons.person, snippet.inventor),
             ],
           ),
         ),
@@ -57,11 +57,11 @@ class ResultItem extends StatelessWidget {
   }
 }
 
-class Paragraph extends StatelessWidget {
+class IconParagraph extends StatelessWidget {
   final IconData icon;
   final String data;
 
-  const Paragraph(this.icon, this.data, {super.key});
+  const IconParagraph(this.icon, this.data, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class Paragraph extends StatelessWidget {
       children: [
         Icon(icon, size: 15),
         const SizedBox(width: 5),
-        Expanded(child: Text(data, style: ResultItem.style)),
+        Expanded(child: Text(data, style: ResultItem.secondary)),
       ],
     );
   }

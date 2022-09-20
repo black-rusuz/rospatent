@@ -1,19 +1,19 @@
 import 'citations_parsed_doc.dart';
 
 class BiblioRu {
-  final List<String> applicantName;
+  final List<String> applicants;
   final String citations;
-  final List<String> inventorName;
+  final List<String> inventors;
   final String title;
-  final List<String> patenteeName;
+  final List<String> patentees;
   final List<CitationsParsedDoc> citationsParsed;
 
   BiblioRu({
-    required this.applicantName,
+    required this.applicants,
     required this.citations,
-    required this.inventorName,
+    required this.inventors,
     required this.title,
-    required this.patenteeName,
+    required this.patentees,
     required this.citationsParsed,
   });
 
@@ -21,15 +21,15 @@ class BiblioRu {
   factory BiblioRu.fromJson(Map<String, dynamic> json) {
     json = json['ru']; // TODO: locale?
     return BiblioRu(
-      applicantName: json['applicant_name'] ?? [],
+      applicants: json['applicant_name'] ?? [],
       citations: json['citations'] ?? '',
-      inventorName: json['inventor']
-          .map((e) => json['name'])
+      inventors: json['inventor']
+          .map((e) => e['name'])
           .whereType<String>()
           .toList(),
       title: json['title'] ?? '',
-      patenteeName: json['patentee']
-          .map((e) => json['name'])
+      patentees: json['patentee']
+          .map((e) => e['name'])
           .whereType<String>()
           .toList(),
       citationsParsed: (json['citations_parsed'] ?? [])
