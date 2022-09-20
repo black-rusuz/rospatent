@@ -126,7 +126,6 @@ class _DetailSliverList extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.bold, color: Styles.primary),
                     children: <TextSpan>[
-                      //TODO: РУС ПОЧИНИ НЕ ПОКАЗЫВАЕТ
                       TextSpan(
                           text: mpk,
                           style: const TextStyle(
