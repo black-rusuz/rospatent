@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../providers/style.dart';
 
 class BaseTextField extends StatelessWidget {
-  final EdgeInsets padding;
+  final EdgeInsets margin;
   final TextEditingController? controller;
   final String? placeholder;
   final Widget icon;
@@ -11,7 +11,7 @@ class BaseTextField extends StatelessWidget {
 
   const BaseTextField({
     super.key,
-    this.padding = EdgeInsets.zero,
+    this.margin = EdgeInsets.zero,
     this.controller,
     this.placeholder,
     this.icon = const SizedBox(),
@@ -21,7 +21,7 @@ class BaseTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: padding,
+      padding: margin,
       child: Container(
         decoration: const BoxDecoration(boxShadow: Styles.shadows),
         child: TextField(

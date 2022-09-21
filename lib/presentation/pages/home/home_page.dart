@@ -5,6 +5,7 @@ import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
 import '../../widgets/base_button.dart';
+import '../../widgets/base_selector.dart';
 import '../../widgets/base_text_field.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/loader.dart';
@@ -48,7 +49,7 @@ class _SearchFieldState extends State<SearchField> {
   @override
   Widget build(BuildContext context) {
     return BaseTextField(
-      padding: const EdgeInsets.symmetric(horizontal: 25),
+      margin: const EdgeInsets.symmetric(horizontal: 25),
       controller: controller,
       placeholder: 'Что вы ищете?',
       icon: const Icon(Icons.search),

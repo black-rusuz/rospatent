@@ -55,6 +55,16 @@ class ResultsFound extends StatelessWidget {
             title: 'Визуализация',
           ),
           const SizedBox(height: 10),
+          const BaseSelector(
+            // TODO: values
+            values: [
+              'Lorem Ipsum',
+              'Heart of a Coward',
+              'System of a Down',
+              'GlassLands',
+              'The Browning',
+            ],
+          ),
           const SizedBox(height: 4),
           Text(
             'Всего найдено: $total',
