@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../data/model/hit.dart';
+import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
 import '../../widgets/base_text_field.dart';
+import '../../widgets/highlighted_text.dart';
 import '../../widgets/loader.dart';
+import '../../widgets/texts.dart';
+import '../detail/detail_page.dart';
 import 'bloc/home_bloc.dart';
-import 'widgets/search_results.dart';
 
+part 'widgets/results_screen.dart';
 part 'widgets/search_screen.dart';
 
 class HomePage extends StatelessWidget {
@@ -23,6 +28,30 @@ class HomePage extends StatelessWidget {
           return const SearchScreen();
         },
       ),
+    );
+  }
+}
+
+class SearchField extends StatefulWidget {
+  const SearchField({super.key});
+
+  @override
+  State<SearchField> createState() => _SearchFieldState();
+}
+
+class _SearchFieldState extends State<SearchField> {
+  final controller = TextEditingController(text: 'Лампа');
+
+  void search() => context.read<HomeBloc>().add(HomeSearch(controller.text));
+
+  @override
+  Widget build(BuildContext context) {
+    return BaseTextField(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      controller: controller,
+      placeholder: 'Что вы ищете?',
+      icon: const Icon(Icons.search),
+      onPressed: search,
     );
   }
 }

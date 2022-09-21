@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'injection.dart' as di;
 import 'injection.dart';
 import 'presentation/pages/home/bloc/home_bloc.dart';
 import 'presentation/pages/home/home_page.dart';
 import 'presentation/providers/style.dart';
 
 void setupApp() {
-  di.configureDependencies();
+  configureDependencies();
 }
 
 void main() {
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
         iconTheme: const IconThemeData(color: Styles.secondary),
         textTheme: GoogleFonts.ptSansTextTheme(),
       ),
-      home: BlocProvider<HomeBloc>(
+      home: BlocProvider(
         create: (_) => sl<HomeBloc>(),
         child: const HomePage(),
       ),

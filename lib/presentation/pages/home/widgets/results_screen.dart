@@ -1,13 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../data/model/hit.dart';
-import '../../../../data/model/snippet.dart';
-import '../../../providers/style.dart';
-import '../../../widgets/highlighted_text.dart';
-import '../../../widgets/texts.dart';
-import '../../detail/detail_page.dart';
-import '../bloc/home_bloc.dart';
+part of '../home_page.dart';
 
 class ResultsScreen extends StatelessWidget {
   final HomeResults state;
@@ -23,9 +14,15 @@ class ResultsScreen extends StatelessWidget {
       onRefresh: () async => context.read<HomeBloc>().emit(HomeInitial()),
       child: ListView(
         children: [
-          ResultsFound(state.total),
-          const SizedBox(height: 15),
-          ...state.results.map(mapResults).toList()
+          const Padding(
+            padding: EdgeInsets.only(top: 10, bottom: 15),
+            child: SearchField(),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: ResultsFound(state.total),
+          ),
+          ...state.results.map(mapResults),
         ],
       ),
     );
