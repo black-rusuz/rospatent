@@ -21,7 +21,7 @@ class HomeInfo extends StatelessWidget {
   const HomeInfo({super.key});
 
   static const TextStyle text = TextStyle(
-    color: Styles.primary,
+    color: Styles.primaryDark,
     fontSize: 12,
   );
 
