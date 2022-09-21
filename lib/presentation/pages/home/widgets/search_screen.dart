@@ -22,6 +22,17 @@ class SearchScreen extends StatelessWidget {
             ],
           ),
         ),
+        Positioned(
+          top: MediaQuery.of(context).size.height * 0.1,
+          left: MediaQuery.of(context).size.width * 0.1,
+          right: MediaQuery.of(context).size.width * 0.1,
+          child: SvgPicture.asset('assets/img/branding.svg'),
+        ),
+        Positioned(
+          bottom: MediaQuery.of(context).size.height * 0.1,
+          width: MediaQuery.of(context).size.width,
+          child: SvgPicture.asset('assets/img/logo.svg'),
+        ),
       ],
     );
   }
