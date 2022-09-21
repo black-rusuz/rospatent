@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../data/model/common.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
@@ -34,8 +35,12 @@ class _DetailAppBar extends StatelessWidget {
 
   const _DetailAppBar({required this.item});
 
+  Common get common => item.common;
+
+  String? get documentNumber => int.parse(common.documentNumber).toString();
+
   String get title =>
-      'Документ ${item.common.publishingOffice} ${item.common.documentNumber.replaceAll('00000', '')} ${item.common.kind}';
+      'Документ ${common.publishingOffice} $documentNumber ${common.kind}';
 
   @override
   Widget build(BuildContext context) {
