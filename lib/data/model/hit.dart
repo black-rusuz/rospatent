@@ -1,4 +1,4 @@
-import 'biblio_ru.dart';
+import 'biblio.dart';
 import 'common.dart';
 import 'drawings.dart';
 import 'meta_source.dart';
