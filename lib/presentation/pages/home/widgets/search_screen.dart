@@ -5,14 +5,24 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: const [
-          SearchField(),
-          HomeInfo(),
-        ],
-      ),
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: SvgPicture.asset(
+            'assets/img/background.svg',
+            fit: BoxFit.cover,
+          ),
+        ),
+        Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: const [
+              SearchField(),
+              HomeInfo(),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
