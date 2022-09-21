@@ -38,7 +38,7 @@ class ResultItem extends StatelessWidget {
             children: [
               HighlightedText(
                 snippet.title,
-                textColor: Styles.blue,
+                textColor: Styles.accent,
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(height: 10),
