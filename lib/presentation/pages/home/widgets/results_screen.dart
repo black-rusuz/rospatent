@@ -23,6 +23,10 @@ class ResultsScreen extends StatelessWidget {
             child: ResultsFound(state.total),
           ),
           ...state.results.map(mapResults),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            child: Pagination(currentPage: state.currentPage),
+          ),
         ],
       ),
     );
@@ -118,6 +122,69 @@ class ResultItem extends StatelessWidget {
               const SizedBox(height: 4),
               IconPoint(Icons.person, snippet.inventor),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Pagination extends StatelessWidget {
+  final int currentPage;
+
+  const Pagination({super.key, required this.currentPage});
+
+  List<int> get pages => currentPage < 4
+      ? List<int>.generate(7, (e) => e + 1)
+      : [
+          ...List.generate(3, (e) => currentPage - 1 - e).reversed,
+          currentPage,
+          ...List.generate(3, (e) => currentPage + 1 + e),
+        ];
+
+  bool isActive(int number) => number == currentPage;
+
+  Widget mapPages(int number) => PageItem(number, isActive: isActive(number));
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: pages.map(mapPages).toList(),
+    );
+  }
+}
+
+class PageItem extends StatelessWidget {
+  final int number;
+  final bool isActive;
+
+  const PageItem(this.number, {super.key, required this.isActive});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: InkWell(
+        onTap: () => context.read<HomeBloc>().add(HomeSetPage(number)),
+        customBorder: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Ink(
+          width: 30,
+          height: 30,
+          decoration: BoxDecoration(
+            color: isActive ? Styles.accent : Colors.transparent,
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: Center(
+            child: Text(
+              number.toString(),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: isActive ? Colors.white : Styles.secondary,
+              ),
+            ),
           ),
         ),
       ),
