@@ -27,7 +27,7 @@ class HighlightedText extends StatelessWidget {
       data: data,
       style: {
         'em': Style(
-          backgroundColor: const Color(0xfffaff00),
+          backgroundColor: const Color(0xFFc5e8ff),
           fontStyle: FontStyle.normal,
         ),
         '*:not(em)': Style(

@@ -24,37 +24,23 @@ class PointGroup extends StatelessWidget {
 class Point extends StatelessWidget {
   final String? title;
   final String value;
-  final bool isActive;
 
   const Point({
     super.key,
     this.title,
     required this.value,
-    this.isActive = true,
   });
-
-  Widget get text => RichText(
-        text: TextSpan(
-          children: [
-            if (title != null) TextSpan(text: '$title: ', style: Styles.bold),
-            TextSpan(text: value, style: Styles.normal),
-          ],
-        ),
-      );
 
   @override
   Widget build(BuildContext context) {
-    return !isActive
-        ? text
-        : Row(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Icon(Icons.search_rounded, size: 15, color: Styles.accent),
-              const SizedBox(width: 5),
-              text,
-            ],
-          );
+    return RichText(
+      text: TextSpan(
+        children: [
+          if (title != null) TextSpan(text: '$title: ', style: Styles.bold),
+          TextSpan(text: value, style: Styles.normal),
+        ],
+      ),
+    );
   }
 }
 
@@ -90,7 +76,7 @@ class Paragraph extends StatelessWidget {
       children: [
         Text(header, style: Styles.bold),
         const SizedBox(height: 8),
-        HighlightedText(data, fontSize: 12),
+        HighlightedText(data, fontSize: 14),
       ],
     );
   }
