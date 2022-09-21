@@ -5,17 +5,12 @@ import '../../data/model/snippet.dart';
 import '../pages/detail/detail_page.dart';
 import '../providers/style.dart';
 import 'highlighted_text.dart';
+import 'texts.dart';
 
 class ResultItem extends StatelessWidget {
   final Hit item;
 
   const ResultItem({super.key, required this.item});
-
-  static const TextStyle secondary = TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeight.bold,
-    color: Styles.secondary,
-  );
 
   Snippet get snippet => item.snippet;
 
@@ -42,7 +37,7 @@ class ResultItem extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(height: 10),
-              Text('МПК ${snippet.classification}', style: secondary),
+              Text('МПК ${snippet.classification}', style: Styles.small),
               const SizedBox(height: 4),
               IconPoint(Icons.feed_rounded, item.id),
               const SizedBox(height: 4),
@@ -53,25 +48,6 @@ class ResultItem extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class IconPoint extends StatelessWidget {
-  final IconData icon;
-  final String data;
-
-  const IconPoint(this.icon, this.data, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Icon(icon, size: 15),
-        const SizedBox(width: 5),
-        Expanded(child: Text(data, style: ResultItem.secondary)),
-      ],
     );
   }
 }
