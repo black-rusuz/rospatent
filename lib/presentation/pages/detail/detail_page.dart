@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
@@ -33,6 +34,12 @@ class _DetailAppBar extends StatelessWidget {
   String get title =>
       'Документ ${item.common.publishingOffice} ${item.common.documentNumber.replaceAll('00000', '')} ${item.common.kind}';
 
+  SnackBar get snackBar => const SnackBar(
+        content: Text('ID документа скопирован'),
+        behavior: SnackBarBehavior.floating,
+        duration: Duration(seconds: 3),
+      );
+
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -40,7 +47,20 @@ class _DetailAppBar extends StatelessWidget {
         onPressed: () => Navigator.of(context).pop(true),
         icon: const Icon(Icons.arrow_back_ios_new_rounded),
       ),
-      title: Text(title, style: Styles.bold),
+      title: Row(
+        children: [
+          Text(title, style: Styles.bold),
+          IconButton(
+            icon: const Icon(Icons.content_copy_outlined, size: 20),
+            onPressed: () =>
+                Clipboard.setData(ClipboardData(text: item.id)).then(
+              (value) {
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
