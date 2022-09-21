@@ -53,8 +53,9 @@ class _SearchFieldState extends State<SearchField> {
       margin: const EdgeInsets.symmetric(horizontal: 25),
       controller: controller,
       placeholder: 'Что вы ищете?',
+      textInputAction: TextInputAction.search,
       icon: const Icon(Icons.search),
-      onPressed: search,
+      onIconPressed: search,
     );
   }
 }
