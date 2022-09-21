@@ -43,17 +43,18 @@ class _BaseSelectorState extends State<BaseSelector> {
     );
   }
 
+  BorderRadius get radius => BorderRadius.circular(5);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: widget.margin,
       child: InkWell(
         onTap: () => showSelect(context),
-        customBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
-        ),
+        customBorder: RoundedRectangleBorder(borderRadius: radius),
         child: Ink(
           padding: const EdgeInsets.symmetric(vertical: 10),
+          decoration: BoxDecoration(borderRadius: radius),
           child: Row(
             children: [
               Text(

@@ -91,18 +91,21 @@ class ResultItem extends StatelessWidget {
 
   Snippet get snippet => item.snippet;
 
+  BorderRadius get radius => BorderRadius.circular(10);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(25, 0, 25, 15),
       child: InkWell(
+        customBorder: RoundedRectangleBorder(borderRadius: radius),
         onTap: () => Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => Detail(item: item))),
         child: Ink(
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: radius,
             boxShadow: Styles.shadows,
           ),
           child: Column(
@@ -161,21 +164,21 @@ class PageItem extends StatelessWidget {
 
   const PageItem(this.number, {super.key, required this.isActive});
 
+  BorderRadius get radius => BorderRadius.circular(5);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4),
       child: InkWell(
         onTap: () => context.read<HomeBloc>().add(HomeSetPage(number)),
-        customBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
-        ),
+        customBorder: RoundedRectangleBorder(borderRadius: radius),
         child: Ink(
           width: 30,
           height: 30,
           decoration: BoxDecoration(
             color: isActive ? Styles.accent : Colors.transparent,
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: radius,
           ),
           child: Center(
             child: Text(
