@@ -139,16 +139,21 @@ class HeaderSummary extends StatelessWidget {
           title: 'Номер заявки',
           value: item.common.application.number,
         ),
+        const SizedBox(height: 5),
         Point(
           title: 'Дата подачи заявки',
           value: item.common.application.filingDate,
         ),
+        const SizedBox(height: 5),
         Point(
           title: 'Опубликовано',
           value: item.common.publicationDate,
         ),
+        const SizedBox(height: 20),
         PointGroup(header: 'Заявители', values: item.biblio.patentees),
+        const SizedBox(height: 5),
         PointGroup(header: 'Авторы', values: item.biblio.inventors),
+        const SizedBox(height: 5),
         PointGroup(header: 'Патентообладатели', values: item.biblio.patentees),
       ],
     );
