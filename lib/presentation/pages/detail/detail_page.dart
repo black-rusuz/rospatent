@@ -6,10 +6,9 @@ import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
-
-extension FromatDate on String {
-  String get formatDate => split('.').reversed.join('.');
-}
+import 'widgets/header_row.dart';
+import 'widgets/header_summary.dart';
+import 'widgets/related_buttons.dart';
 
 class Detail extends StatelessWidget {
   final Hit item;
@@ -87,86 +86,12 @@ class _DetailSliverList extends StatelessWidget {
               Paragraph(header: 'Формула', data: snippet.description),
               const SizedBox(height: 20),
               Paragraph(header: 'Описание', data: snippet.description),
+              const SizedBox(height: 25),
+              const RelatedButtons(),
             ],
           ),
         ),
       ]),
-    );
-  }
-}
-
-class HeaderRow extends StatelessWidget {
-  final Hit item;
-
-  const HeaderRow({super.key, required this.item});
-
-  static TextStyle get boldAccent => Styles.bold.copyWith(color: Styles.accent);
-
-  String get docNum => item.common.documentNumber.replaceAll('00000', '');
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        RichText(
-          text: TextSpan(
-            text: item.common.publishingOffice,
-            style: Styles.bold,
-            children: [
-              const TextSpan(text: ' '),
-              TextSpan(text: docNum, style: boldAccent),
-              const TextSpan(text: ' '),
-              TextSpan(text: item.common.kind),
-            ],
-          ),
-        ),
-        RichText(
-          text: TextSpan(
-            text: 'МПК',
-            style: Styles.bold,
-            children: [
-              const TextSpan(text: ' '),
-              TextSpan(text: item.snippet.classification, style: boldAccent),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class HeaderSummary extends StatelessWidget {
-  final Hit item;
-
-  const HeaderSummary({super.key, required this.item});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Point(
-          title: 'Номер заявки',
-          value: item.common.application.number,
-        ),
-        const SizedBox(height: 5),
-        Point(
-          title: 'Дата подачи заявки',
-          value: item.common.application.filingDate.formatDate,
-        ),
-        const SizedBox(height: 5),
-        Point(
-          title: 'Опубликовано',
-          value: item.common.application.filingDate.formatDate,
-        ),
-        const SizedBox(height: 20),
-        PointGroup(header: 'Заявители', values: item.biblio.patentees),
-        const SizedBox(height: 5),
-        PointGroup(header: 'Авторы', values: item.biblio.inventors),
-        const SizedBox(height: 5),
-        PointGroup(header: 'Патентообладатели', values: item.biblio.patentees),
-      ],
     );
   }
 }
