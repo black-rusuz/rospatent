@@ -1,5 +1,3 @@
-import 'citations_parsed.dart';
-
 abstract class Biblio {
   final List<String> applicants;
   final String citations;
@@ -28,21 +26,53 @@ class BiblioRu extends Biblio {
     required super.citationsParsed,
   });
 
-  // TODO: locale?
   factory BiblioRu.fromJson(Map<String, dynamic> json) {
-    json = json['ru'];
+    // TODO: locale?
+    json = json['ru'] ?? json['en'];
     return BiblioRu(
       applicants: json['applicant_name'] ?? [],
       citations: json['citations'] ?? '',
       inventors:
           json['inventor'].map((e) => e['name']).whereType<String>().toList(),
       title: json['title'] ?? '',
-      patentees:
-          json['patentee'].map((e) => e['name']).whereType<String>().toList(),
+      patentees: (json['patentee'] ?? [])
+          .map((e) => e['name'])
+          .whereType<String>()
+          .toList(),
       citationsParsed: (json['citations_parsed'] ?? [])
           .map((e) => CitationsParsed.fromJson(e))
           .whereType<CitationsParsed>()
           .toList(),
+    );
+  }
+}
+
+class CitationsParsed {
+  final String text;
+  final int? docNumber;
+  final String? publishingOffice;
+  final String? kind;
+  final String? publicationDate;
+  final String? identity;
+
+  CitationsParsed({
+    required this.text,
+    required this.docNumber,
+    required this.publishingOffice,
+    required this.kind,
+    required this.publicationDate,
+    required this.identity,
+  });
+
+  factory CitationsParsed.fromJson(Map<String, dynamic> json) {
+    final doc = json['doc'];
+    return CitationsParsed(
+      text: json['text'] ?? '',
+      docNumber: int.tryParse(doc?['doc_number'] ?? ''),
+      publishingOffice: doc?['publishing_office'],
+      kind: doc?['kind'],
+      publicationDate: doc?['publication_date'],
+      identity: doc?['identity'],
     );
   }
 }
