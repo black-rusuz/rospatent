@@ -79,12 +79,7 @@ class _DetailSliverList extends StatelessWidget {
               const SizedBox(height: 20),
               HeaderSummary(item: item),
               const SizedBox(height: 20),
-              const Text(
-                'Реферат',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              HighlightedText(snippet.description, fontSize: 12),
+              Paragraph(header: 'Реферат', data: snippet.description),
             ],
           ),
         ),
@@ -146,33 +141,33 @@ class HeaderSummary extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Paragraph(
+        Point(
           title: 'Номер заявки',
           value: item.common.application.number,
           isActive: false,
         ),
-        Paragraph(
+        Point(
           title: 'Дата подачи заявки',
           value: item.common.application.filingDate,
         ),
-        Paragraph(
+        Point(
           title: 'Опубликовано',
           value: item.common.publicationDate,
         ),
-        Values(header: 'Заявители', values: item.biblio.patentees),
-        Values(header: 'Авторы', values: item.biblio.inventors),
-        Values(header: 'Патентообладатели', values: item.biblio.patentees),
+        PointGroup(header: 'Заявители', values: item.biblio.patentees),
+        PointGroup(header: 'Авторы', values: item.biblio.inventors),
+        PointGroup(header: 'Патентообладатели', values: item.biblio.patentees),
       ],
     );
   }
 }
 
-class Paragraph extends StatelessWidget {
+class Point extends StatelessWidget {
   final String? title;
   final String value;
   final bool isActive;
 
-  const Paragraph({
+  const Point({
     super.key,
     this.title,
     required this.value,
@@ -204,11 +199,11 @@ class Paragraph extends StatelessWidget {
   }
 }
 
-class Values extends StatelessWidget {
+class PointGroup extends StatelessWidget {
   final String header;
   final List<String> values;
 
-  const Values({super.key, required this.header, required this.values});
+  const PointGroup({super.key, required this.header, required this.values});
 
   @override
   Widget build(BuildContext context) {
@@ -216,7 +211,26 @@ class Values extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('$header:', style: Detail.bold),
-        ...values.map((e) => Paragraph(value: e)),
+        ...values.map((e) => Point(value: e)),
+      ],
+    );
+  }
+}
+
+class Paragraph extends StatelessWidget {
+  final String header;
+  final String data;
+
+  const Paragraph({super.key, required this.header, required this.data});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(header, style: Detail.bold),
+        const SizedBox(height: 8),
+        HighlightedText(data, fontSize: 12),
       ],
     );
   }

@@ -44,11 +44,11 @@ class ResultItem extends StatelessWidget {
               const SizedBox(height: 10),
               Text('МПК ${snippet.classification}', style: secondary),
               const SizedBox(height: 4),
-              IconParagraph(Icons.feed_rounded, item.id),
+              IconPoint(Icons.feed_rounded, item.id),
               const SizedBox(height: 4),
-              IconParagraph(Icons.people_alt, snippet.applicant),
+              IconPoint(Icons.people_alt, snippet.applicant),
               const SizedBox(height: 4),
-              IconParagraph(Icons.person, snippet.inventor),
+              IconPoint(Icons.person, snippet.inventor),
             ],
           ),
         ),
@@ -57,11 +57,11 @@ class ResultItem extends StatelessWidget {
   }
 }
 
-class IconParagraph extends StatelessWidget {
+class IconPoint extends StatelessWidget {
   final IconData icon;
   final String data;
 
-  const IconParagraph(this.icon, this.data, {super.key});
+  const IconPoint(this.icon, this.data, {super.key});
 
   @override
   Widget build(BuildContext context) {
