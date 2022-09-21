@@ -28,7 +28,7 @@ class BaseTextField extends StatelessWidget {
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
-          hintText: placeholder ?? '',
+          hintText: placeholder,
           suffixIcon: icon == null
               ? null
               : IconButton(icon: icon!, onPressed: onPressed),
