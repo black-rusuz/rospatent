@@ -74,6 +74,10 @@ class _DetailSliverList extends StatelessWidget {
               HeaderSummary(item: item),
               const SizedBox(height: 20),
               Paragraph(header: 'Реферат', data: snippet.description),
+              const SizedBox(height: 20),
+              Paragraph(header: 'Формула', data: snippet.description),
+              const SizedBox(height: 20),
+              Paragraph(header: 'Описание', data: snippet.description),
             ],
           ),
         ),
@@ -101,8 +105,8 @@ class HeaderRow extends StatelessWidget {
             text: item.common.publishingOffice,
             style: Styles.bold,
             children: [
-              TextSpan(text: docNum, style: boldAccent),
-              TextSpan(text: item.common.kind),
+              TextSpan(text: ' $docNum', style: boldAccent),
+              TextSpan(text: ' ${item.common.kind}'),
             ],
           ),
         ),
@@ -134,7 +138,6 @@ class HeaderSummary extends StatelessWidget {
         Point(
           title: 'Номер заявки',
           value: item.common.application.number,
-          isActive: false,
         ),
         Point(
           title: 'Дата подачи заявки',
