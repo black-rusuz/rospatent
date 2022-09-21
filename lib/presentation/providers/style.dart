@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Styles {
   // * COLORS
-  static const Color primary = Color.fromRGBO(54, 54, 54, 1);
+  static const Color primaryDark = Color.fromRGBO(54, 54, 54, 1);
+  static const Color primaryLight = Color.fromRGBO(83, 83, 83, 1);
   static const Color secondary = Color.fromRGBO(185, 185, 197, 1);
   static const Color background = Color.fromRGBO(247, 248, 251, 1);
   static const Color accent = Color.fromRGBO(0, 84, 166, 1);
@@ -30,15 +31,15 @@ class Styles {
   static const int _blueAccentValue = 0xFFFFFFFF;
 
   // * FONTS
-  static const TextStyle normal = TextStyle(color: primary);
+  static const TextStyle normal = TextStyle(color: primaryDark);
 
   static const TextStyle bold =
-      TextStyle(fontWeight: FontWeight.bold, color: primary);
+      TextStyle(fontWeight: FontWeight.bold, color: primaryDark);
 
   static const TextStyle small = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.bold,
-    color: Styles.secondary,
+    color: Styles.primaryLight,
   );
 
   // * OTHER

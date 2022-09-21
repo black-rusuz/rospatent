@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           color: Colors.transparent,
           iconTheme: IconThemeData(color: Styles.secondary),
         ),
-        iconTheme: const IconThemeData(color: Styles.secondary),
+        iconTheme: const IconThemeData(color: Styles.primaryLight),
         textTheme: GoogleFonts.ptSansTextTheme(),
       ),
       home: BlocProvider(

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
+import '../../widgets/base_button.dart';
 import '../../widgets/base_text_field.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/loader.dart';

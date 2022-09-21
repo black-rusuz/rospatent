@@ -38,13 +38,24 @@ class ResultsFound extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
-      child: Text(
-        'Всего найдено: $total',
-        style: const TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
-          color: Styles.primary,
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Всего найдено: $total',
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: Styles.primaryDark,
+            ),
+          ),
+          BaseButton(
+            // TODO: onTap
+            onTap: () {},
+            icon: Icons.insert_chart_outlined_rounded,
+            title: 'Визуализация',
+          ),
+        ],
       ),
     );
   }

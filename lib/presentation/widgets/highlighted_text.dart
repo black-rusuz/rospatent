@@ -31,7 +31,7 @@ class HighlightedText extends StatelessWidget {
           fontStyle: FontStyle.normal,
         ),
         '*:not(em)': Style(
-          color: textColor ?? Styles.primary,
+          color: textColor ?? Styles.primaryDark,
           fontSize: size,
           fontWeight: fontWeight,
         ),
