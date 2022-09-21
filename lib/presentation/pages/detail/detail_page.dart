@@ -7,6 +7,10 @@ import '../../providers/style.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
 
+extension FromatDate on String {
+  String get formatDate => split('.').reversed.join('.');
+}
+
 class Detail extends StatelessWidget {
   final Hit item;
 
@@ -125,8 +129,10 @@ class HeaderRow extends StatelessWidget {
             text: item.common.publishingOffice,
             style: Styles.bold,
             children: [
-              TextSpan(text: ' $docNum', style: boldAccent),
-              TextSpan(text: ' ${item.common.kind}'),
+              const TextSpan(text: ' '),
+              TextSpan(text: docNum, style: boldAccent),
+              const TextSpan(text: ' '),
+              TextSpan(text: item.common.kind),
             ],
           ),
         ),
@@ -162,12 +168,12 @@ class HeaderSummary extends StatelessWidget {
         const SizedBox(height: 5),
         Point(
           title: 'Дата подачи заявки',
-          value: item.common.application.filingDate,
+          value: item.common.application.filingDate.formatDate,
         ),
         const SizedBox(height: 5),
         Point(
           title: 'Опубликовано',
-          value: item.common.publicationDate,
+          value: item.common.application.filingDate.formatDate,
         ),
         const SizedBox(height: 20),
         PointGroup(header: 'Заявители', values: item.biblio.patentees),
