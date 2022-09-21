@@ -35,7 +35,12 @@ class SearchApiImpl implements SearchApi {
     final timer = Stopwatch()..start();
     late final Map<String, dynamic> data;
     if (!debugMode) {
-      final response = await client.post('$url/search', data: {'q': pattern});
+      final body = {
+        'q': pattern,
+        'pre_tag': '<span>',
+        'post_tag': '</span>',
+      };
+      final response = await client.post('$url/search', data: body);
       data = response.data;
       debugPrint('HTTP: ${response.statusCode}');
     } else {
