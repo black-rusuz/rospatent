@@ -26,11 +26,10 @@ class HighlightedText extends StatelessWidget {
     return Html(
       data: data,
       style: {
-        'em': Style(
+        'span': Style(
           backgroundColor: const Color(0xFFc5e8ff),
-          fontStyle: FontStyle.normal,
         ),
-        '*:not(em)': Style(
+        '*:not(span)': Style(
           color: textColor ?? Styles.primaryDark,
           fontSize: size,
           fontWeight: fontWeight,
