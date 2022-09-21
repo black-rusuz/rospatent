@@ -26,6 +26,12 @@ class SearchApiImpl implements SearchApi {
         'Content-Type': 'application/json',
       };
 
+  Map<String, String> getBody(String pattern) => {
+        'q': pattern,
+        'pre_tag': '<span>',
+        'post_tag': '</span>',
+      };
+
   SearchApiImpl({required this.client}) {
     client.options.headers = headers;
   }
@@ -35,12 +41,10 @@ class SearchApiImpl implements SearchApi {
     final timer = Stopwatch()..start();
     late final Map<String, dynamic> data;
     if (!debugMode) {
-      final body = {
-        'q': pattern,
-        'pre_tag': '<span>',
-        'post_tag': '</span>',
-      };
-      final response = await client.post('$url/search', data: body);
+      final response = await client.post(
+        '$url/search',
+        data: getBody(pattern),
+      );
       data = response.data;
       debugPrint('HTTP: ${response.statusCode}');
     } else {
