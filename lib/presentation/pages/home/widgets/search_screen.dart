@@ -1,6 +1,36 @@
-import 'package:flutter/cupertino.dart';
+part of '../home_page.dart';
 
-import '../providers/style.dart';
+class SearchScreen extends StatefulWidget {
+  const SearchScreen({super.key});
+
+  @override
+  State<SearchScreen> createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
+  final controller = TextEditingController(text: 'Лампа');
+
+  void search() => context.read<HomeBloc>().add(HomeSearch(controller.text));
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          BaseTextField(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            controller: controller,
+            placeholder: 'Что вы ищете?',
+            icon: const Icon(Icons.search),
+            onPressed: search,
+          ),
+          const HomeInfo(),
+        ],
+      ),
+    );
+  }
+}
 
 class HomeInfo extends StatelessWidget {
   const HomeInfo({super.key});
