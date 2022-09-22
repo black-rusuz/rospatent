@@ -32,6 +32,9 @@ dev_dependencies:
 flutter:
   assets:
     - assets/json/response.json
+    - assets/img/background.svg
+    - assets/img/branding.svg
+    - assets/img/logo.svg
 
   uses-material-design: true
 

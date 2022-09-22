@@ -16,18 +16,21 @@ class BaseButton extends StatelessWidget {
     this.margin = EdgeInsets.zero,
   });
 
+  BorderRadius get radius => BorderRadius.circular(5);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: margin,
       child: InkWell(
         onTap: onTap,
-        customBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
-        ),
+        customBorder: RoundedRectangleBorder(borderRadius: radius),
         child: Ink(
-          color: Colors.white,
           padding: const EdgeInsets.symmetric(vertical: 10),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: radius,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

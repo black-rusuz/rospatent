@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import '../../../data/model/common.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
+import '../../widgets/base_button.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
+import 'widgets/header_row.dart';
+import 'widgets/header_summary.dart';
+import 'widgets/related_buttons.dart';
 import '../../widgets/drawings.dart';
 import '../../../data/model/drawings.dart';
 
@@ -32,8 +38,18 @@ class _DetailAppBar extends StatelessWidget {
 
   const _DetailAppBar({required this.item});
 
+  Common get common => item.common;
+
+  String? get documentNumber => int.parse(common.documentNumber).toString();
+
   String get title =>
-      'Документ ${item.common.publishingOffice} ${item.common.documentNumber.replaceAll('00000', '')} ${item.common.kind}';
+      'Документ ${common.publishingOffice} $documentNumber ${common.kind}';
+
+  SnackBar get snackBar => const SnackBar(
+        content: Text('ID документа скопирован'),
+        behavior: SnackBarBehavior.floating,
+        duration: Duration(seconds: 3),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +58,20 @@ class _DetailAppBar extends StatelessWidget {
         onPressed: () => Navigator.of(context).pop(true),
         icon: const Icon(Icons.arrow_back_ios_new_rounded),
       ),
-      title: Text(title, style: Styles.bold),
+      title: Row(
+        children: [
+          Text(title, style: Styles.bold),
+          IconButton(
+            icon: const Icon(Icons.content_copy_outlined, size: 20),
+            onPressed: () =>
+                Clipboard.setData(ClipboardData(text: item.id)).then(
+              (value) {
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -54,7 +83,11 @@ class _DetailSliverList extends StatelessWidget {
 
   Snippet get snippet => item.snippet;
 
-  String get docNum => item.common.documentNumber.replaceAll('00000', '');
+  String? get documentNumber =>
+      int.parse(item.common.documentNumber).toString();
+
+  String get espacenet =>
+      'https://worldwide.espacenet.com/patent/search/?q=pn%3D${item.common.publishingOffice}${documentNumber ?? ''}${item.common.kind}';
 
   List<Drawing> get drawings => item.drawings;
 
@@ -76,6 +109,13 @@ class _DetailSliverList extends StatelessWidget {
               HeaderRow(item: item),
               const SizedBox(height: 20),
               HeaderSummary(item: item),
+              const SizedBox(height: 20),
+              BaseButton(
+                title: 'Espacenet',
+                // TODO: launch url
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => Text(espacenet))),
+              ),
               if (drawings.isNotEmpty) Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Drawings(data: drawings),
@@ -86,6 +126,8 @@ class _DetailSliverList extends StatelessWidget {
               Paragraph(header: 'Формула', data: snippet.description),
               const SizedBox(height: 20),
               Paragraph(header: 'Описание', data: snippet.description),
+              const SizedBox(height: 25),
+              const RelatedButtons(),
             ],
           ),
         ),

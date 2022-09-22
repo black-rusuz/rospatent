@@ -14,13 +14,40 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   HomeBloc(this._api) : super(HomeInitial()) {
     on<HomeSearch>(_search);
+    on<HomeSetPage>(_setPage);
   }
+
+  String _pattern = '';
+  int _page = 1;
 
   void _search(HomeSearch event, Emitter<HomeState> emit) async {
     emit(HomeLoading());
+    _page = 1;
+    _pattern = event.pattern;
     try {
-      final response = await _api.search(event.pattern);
-      emit(HomeResults(total: response.total, results: response.hits));
+      final response = await _api.search(_pattern);
+      emit(HomeResults(
+        total: response.total,
+        currentPage: _page,
+        results: response.hits,
+      ));
+    } on Exception {
+      // TODO: errors
+      emit(HomeInitial());
+    }
+  }
+
+  void _setPage(HomeSetPage event, Emitter<HomeState> emit) async {
+    emit(HomeLoading());
+    _page = event.page;
+    try {
+      // TODO: pass page
+      final response = await _api.search(_pattern, page: _page);
+      emit(HomeResults(
+        total: response.total,
+        currentPage: _page,
+        results: response.hits,
+      ));
     } on Exception {
       emit(HomeInitial());
     }
