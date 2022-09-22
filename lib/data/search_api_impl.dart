@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
 import '../domain/search_api.dart';
-import '../utils/json_print.dart';
 import 'model/search_response.dart';
 
 // TODO: это тоже нахуй, но можно ебануть ещё один env
@@ -30,7 +29,7 @@ class SearchApiImpl implements SearchApi {
         'Content-Type': 'application/json',
       };
 
-  Map<String, dynamic> getBody(
+  Map<String, dynamic> getSearchBody(
     String pattern, {
     required int page,
     Map<String, dynamic>? arguments,
@@ -49,10 +48,11 @@ class SearchApiImpl implements SearchApi {
   Future<SearchResponse> search(String pattern, {int page = 1}) async {
     final timer = Stopwatch()..start();
     late final Map<String, dynamic> data;
+
     if (!debugMode) {
       final response = await client.post(
         '$url/search',
-        data: getBody(pattern, page: page),
+        data: getSearchBody(pattern, page: page),
       );
       data = response.data;
       debugPrint('HTTP: ${response.statusCode}');
@@ -60,7 +60,54 @@ class SearchApiImpl implements SearchApi {
       final json = await rootBundle.loadString('assets/json/response.json');
       data = jsonDecode(json);
     }
+
     //JsonPrint(data);
+    final model = SearchResponse.fromJson(data);
+    debugPrint('LOAD TIME: ${timer.elapsed}');
+    return model;
+  }
+
+  Map<String, dynamic> getSimilarBody(
+    String id, {
+    required int page,
+    Map<String, dynamic>? arguments,
+  }) {
+    arguments ??= {};
+    arguments.addAll({
+      'pat_id': id,
+      'offset': page * 10,
+      'pre_tag': '<span>',
+      'post_tag': '</span>',
+      'type_search': 'id_search',
+    });
+    return arguments;
+  }
+
+  @override
+  Future<SearchResponse> searchSimilar(String id, {int page = 1}) async {
+    final timer = Stopwatch()..start();
+
+    final response = await client.post(
+      '$url/similar_search',
+      data: getSimilarBody(id, page: page),
+    );
+    final Map<String, dynamic> data = response.data;
+
+    final model = SearchResponse.fromJson(data);
+    debugPrint('LOAD TIME: ${timer.elapsed}');
+    return model;
+  }
+
+  @override
+  Future<SearchResponse> searchExtended({int page = 1}) async {
+    final timer = Stopwatch()..start();
+
+    final response = await client.post(
+      '$url/search',
+      data: getSearchBody('pattern', page: page),
+    );
+    final Map<String, dynamic> data = response.data;
+
     final model = SearchResponse.fromJson(data);
     debugPrint('LOAD TIME: ${timer.elapsed}');
     return model;
