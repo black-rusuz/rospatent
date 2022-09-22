@@ -115,10 +115,11 @@ class _DetailSliverList extends StatelessWidget {
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => Text(espacenet))),
               ),
-              if (drawings.isNotEmpty) Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Drawings(data: drawings),
-              ),
+              if (drawings.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Drawings(data: drawings),
+                ),
               const SizedBox(height: 20),
               Paragraph(header: 'Реферат', data: snippet.description),
               const SizedBox(height: 20),
