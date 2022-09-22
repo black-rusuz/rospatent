@@ -33,6 +33,7 @@ class BaseTextField extends StatelessWidget {
           filled: true,
           fillColor: Colors.white,
           hintText: placeholder,
+          hintStyle: const TextStyle(color: Styles.secondary),
           suffixIcon: icon == null
               ? null
               : IconButton(icon: icon!, onPressed: onIconPressed),

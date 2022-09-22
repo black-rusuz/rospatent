@@ -12,6 +12,7 @@ import '../../widgets/highlighted_text.dart';
 import '../../widgets/loader.dart';
 import '../../widgets/texts.dart';
 import '../detail/detail_page.dart';
+import '../extended_search/extended_search.dart';
 import 'bloc/home_bloc.dart';
 
 part 'widgets/results_screen.dart';

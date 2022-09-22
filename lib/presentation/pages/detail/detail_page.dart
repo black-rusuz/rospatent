@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../../data/model/common.dart';
+import '../../../data/model/drawings.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
 import '../../widgets/base_button.dart';
+import '../../widgets/drawings.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
-import 'widgets/header_row.dart';
-import 'widgets/header_summary.dart';
 import 'widgets/related_buttons.dart';
-import '../../widgets/drawings.dart';
-import '../../../data/model/drawings.dart';
 
 class Detail extends StatelessWidget {
   final Hit item;

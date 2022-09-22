@@ -46,8 +46,8 @@ class ResultsFound extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           BaseButton(
-            // TODO: onTap
-            onTap: () {},
+            onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const ExtendedSearch())),
             icon: Icons.settings_rounded,
             title: 'Расширенный поиск',
           ),
