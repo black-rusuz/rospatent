@@ -11,6 +11,7 @@ class SearchScreen extends StatelessWidget {
           child: SvgPicture.asset(
             'assets/img/background.svg',
             fit: BoxFit.cover,
+            color: const Color(0xFFDCDCE2),
           ),
         ),
         Center(
