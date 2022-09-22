@@ -42,7 +42,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     _page = event.page;
     try {
       // TODO: pass page
-      final response = await _api.search(_pattern);
+      final response = await _api.search(_pattern, page: _page);
       emit(HomeResults(
         total: response.total,
         currentPage: _page,
