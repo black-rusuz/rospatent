@@ -5,6 +5,7 @@ import '../../../data/model/common.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
+import '../../widgets/base_button.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
 import 'widgets/header_row.dart';
@@ -80,7 +81,11 @@ class _DetailSliverList extends StatelessWidget {
 
   Snippet get snippet => item.snippet;
 
-  String get docNum => item.common.documentNumber.replaceAll('00000', '');
+  String? get documentNumber =>
+      int.parse(item.common.documentNumber).toString();
+
+  String get espacenet =>
+      'https://worldwide.espacenet.com/patent/search/?q=pn%3D${item.common.publishingOffice}${documentNumber ?? ''}${item.common.kind}';
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +105,13 @@ class _DetailSliverList extends StatelessWidget {
               HeaderRow(item: item),
               const SizedBox(height: 20),
               HeaderSummary(item: item),
+              const SizedBox(height: 20),
+              BaseButton(
+                title: 'Espacenet',
+                // TODO: launch url
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => Text(espacenet))),
+              ),
               const SizedBox(height: 20),
               Paragraph(header: 'Реферат', data: snippet.description),
               const SizedBox(height: 20),
