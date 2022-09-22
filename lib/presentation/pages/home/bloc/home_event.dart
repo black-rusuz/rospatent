@@ -24,3 +24,12 @@ class HomeSetPage extends HomeEvent {
   @override
   List<Object?> get props => [page];
 }
+
+class HomeSimilarSearch extends HomeEvent {
+  final String id;
+
+  const HomeSimilarSearch(this.id);
+
+  @override
+  List<Object?> get props => [id];
+}

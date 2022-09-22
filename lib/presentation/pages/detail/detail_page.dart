@@ -10,7 +10,8 @@ import '../../widgets/base_button.dart';
 import '../../widgets/drawings.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
-import 'widgets/related_buttons.dart';
+import 'widgets/header_row.dart';
+import 'widgets/header_summary.dart';
 
 class Detail extends StatelessWidget {
   final Hit item;
@@ -125,80 +126,18 @@ class _DetailSliverList extends StatelessWidget {
               const SizedBox(height: 20),
               Paragraph(header: 'Описание', data: snippet.description),
               const SizedBox(height: 25),
-              const RelatedButtons(),
+              // BaseButton(
+              //   title: 'Похожие документы',
+              //   // TODO: ЗА ТАКОЕ В ЧЕЧНЕ ОТРЫВАЛИ НОГИ
+              //   onTap: () {
+              //     sl<HomeBloc>().add(HomeSimilarSearch(item.id));
+              //     Navigator.of(context).pop();
+              //   },
+              // ),
             ],
           ),
         ),
       ]),
-    );
-  }
-}
-
-class HeaderRow extends StatelessWidget {
-  final Hit item;
-
-  const HeaderRow({super.key, required this.item});
-
-  static TextStyle get boldAccent => Styles.bold.copyWith(color: Styles.accent);
-
-  String get docNum => item.common.documentNumber.replaceAll('00000', '');
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        RichText(
-          text: TextSpan(
-            text: item.common.publishingOffice,
-            style: Styles.bold,
-            children: [
-              TextSpan(text: ' $docNum', style: boldAccent),
-              TextSpan(text: ' ${item.common.kind}'),
-            ],
-          ),
-        ),
-        RichText(
-          text: TextSpan(
-            text: 'МПК',
-            style: Styles.bold,
-            children: [
-              const TextSpan(text: ' '),
-              TextSpan(text: item.snippet.classification, style: boldAccent),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class HeaderSummary extends StatelessWidget {
-  final Hit item;
-
-  const HeaderSummary({super.key, required this.item});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Point(
-          title: 'Номер заявки',
-          value: item.common.application.number,
-        ),
-        Point(
-          title: 'Дата подачи заявки',
-          value: item.common.application.filingDate,
-        ),
-        Point(
-          title: 'Опубликовано',
-          value: item.common.publicationDate,
-        ),
-        PointGroup(header: 'Заявители', values: item.biblio.patentees),
-        PointGroup(header: 'Авторы', values: item.biblio.inventors),
-        PointGroup(header: 'Патентообладатели', values: item.biblio.patentees),
-      ],
     );
   }
 }
