@@ -61,11 +61,9 @@ class ResultsFound extends StatelessWidget {
           const BaseSelector(
             // TODO: values
             values: [
-              'Lorem Ipsum',
-              'Heart of a Coward',
-              'System of a Down',
-              'GlassLands',
-              'The Browning',
+              'По релевантности',
+              'По дате публикации',
+              'По дате подачи заявки',
             ],
           ),
           const SizedBox(height: 4),
