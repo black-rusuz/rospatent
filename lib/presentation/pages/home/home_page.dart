@@ -11,6 +11,7 @@ import '../../widgets/base_text_field.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/loader.dart';
 import '../../widgets/texts.dart';
+import '../charts/charts_page.dart';
 import '../detail/detail_page.dart';
 import '../search/search_page.dart';
 import 'bloc/home_bloc.dart';
