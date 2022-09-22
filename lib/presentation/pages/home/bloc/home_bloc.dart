@@ -15,6 +15,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(this._api) : super(HomeInitial()) {
     on<HomeSearch>(_search);
     on<HomeSetPage>(_setPage);
+    on<HomeSimilarSearch>(_searchSimilar);
   }
 
   String _pattern = '';
@@ -41,8 +42,23 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(HomeLoading());
     _page = event.page;
     try {
-      // TODO: pass page
+      // TODO: similar
       final response = await _api.search(_pattern, page: _page);
+      emit(HomeResults(
+        total: response.total,
+        currentPage: _page,
+        results: response.hits,
+      ));
+    } on Exception {
+      emit(HomeInitial());
+    }
+  }
+
+  void _searchSimilar(HomeSimilarSearch event, Emitter<HomeState> emit) async {
+    emit(HomeLoading());
+    _page = 1;
+    try {
+      final response = await _api.searchSimilar(event.id);
       emit(HomeResults(
         total: response.total,
         currentPage: _page,

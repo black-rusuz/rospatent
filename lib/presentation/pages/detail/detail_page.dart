@@ -8,7 +8,6 @@ import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
 import 'widgets/header_row.dart';
 import 'widgets/header_summary.dart';
-import 'widgets/related_buttons.dart';
 
 class Detail extends StatelessWidget {
   final Hit item;
@@ -87,7 +86,14 @@ class _DetailSliverList extends StatelessWidget {
               const SizedBox(height: 20),
               Paragraph(header: 'Описание', data: snippet.description),
               const SizedBox(height: 25),
-              const RelatedButtons(),
+              // BaseButton(
+              //   title: 'Похожие документы',
+              //   // TODO: ЗА ТАКОЕ В ЧЕЧНЕ ОТРЫВАЛИ НОГИ
+              //   onTap: () {
+              //     sl<HomeBloc>().add(HomeSimilarSearch(item.id));
+              //     Navigator.of(context).pop();
+              //   },
+              // ),
             ],
           ),
         ),
