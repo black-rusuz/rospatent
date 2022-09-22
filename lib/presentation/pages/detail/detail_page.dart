@@ -44,11 +44,15 @@ class _DetailAppBar extends StatelessWidget {
   String get title =>
       'Документ ${common.publishingOffice} $documentNumber ${common.kind}';
 
-  SnackBar get snackBar => const SnackBar(
-        content: Text('ID документа скопирован'),
-        behavior: SnackBarBehavior.floating,
-        duration: Duration(seconds: 3),
-      );
+  void showSnackBar(BuildContext context) =>
+      Clipboard.setData(ClipboardData(text: item.id))
+          .then((_) => ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('ID документа скопирован'),
+                  behavior: SnackBarBehavior.floating,
+                  duration: Duration(seconds: 3),
+                ),
+              ));
 
   @override
   Widget build(BuildContext context) {
@@ -62,12 +66,7 @@ class _DetailAppBar extends StatelessWidget {
           Text(title, style: Styles.bold),
           IconButton(
             icon: const Icon(Icons.content_copy_outlined, size: 20),
-            onPressed: () =>
-                Clipboard.setData(ClipboardData(text: item.id)).then(
-              (value) {
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              },
-            ),
+            onPressed: () => showSnackBar(context),
           ),
         ],
       ),
