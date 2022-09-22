@@ -32,7 +32,7 @@ class _ExtendedSearchState extends State<ExtendedSearch> {
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
           const SearchField(),
           BaseTextField(
