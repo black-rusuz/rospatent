@@ -5,6 +5,8 @@ import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
+import '../../widgets/drawings.dart';
+import '../../../data/model/drawings.dart';
 
 class Detail extends StatelessWidget {
   final Hit item;
@@ -54,6 +56,8 @@ class _DetailSliverList extends StatelessWidget {
 
   String get docNum => item.common.documentNumber.replaceAll('00000', '');
 
+  List<Drawing> get drawings => item.drawings;
+
   @override
   Widget build(BuildContext context) {
     return SliverList(
@@ -72,6 +76,10 @@ class _DetailSliverList extends StatelessWidget {
               HeaderRow(item: item),
               const SizedBox(height: 20),
               HeaderSummary(item: item),
+              if (drawings.isNotEmpty) Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Drawings(data: drawings),
+              ),
               const SizedBox(height: 20),
               Paragraph(header: 'Реферат', data: snippet.description),
               const SizedBox(height: 20),
