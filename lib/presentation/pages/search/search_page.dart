@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../providers/style.dart';
+import '../../widgets/base_button.dart';
 import '../../widgets/base_text_field.dart';
+import '../home/bloc/home_bloc.dart';
 import '../home/home_page.dart';
 
 class Search extends StatefulWidget {
@@ -21,17 +23,10 @@ class _SearchState extends State<Search> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Styles.background,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
-        leading: IconButton(
-          onPressed: () => Navigator.of(context).pop(true),
-          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-        ),
-      ),
-      body: ListView(
+    return Container(
+      color: Colors.white,
+      alignment: Alignment.center,
+      child: ListView(
         children: [
           const SearchField(),
           BaseTextField(
@@ -66,6 +61,18 @@ class _SearchState extends State<Search> {
             controller: applicant,
             placeholder: 'Заявитель',
           ),
+          BaseButton(
+              title: 'Найти',
+              onTap: () {
+                context.read<HomeBloc>().add(HomeExtendedSearch(
+                      number: number.text,
+                      dateFrom: dateFrom.text,
+                      dateTo: dateTo.text,
+                      author: author.text,
+                      patentee: patentee.text,
+                    ));
+                Navigator.of(context).pop();
+              }),
         ],
       ),
     );

@@ -7,5 +7,9 @@ abstract class SearchApi {
 
   Future<SearchResponse> searchSimilar(String id, {int page = 1});
 
-  Future<SearchResponse> searchExtended({int page = 1});
+  Future<SearchResponse> searchExtended(
+    String pattern, {
+    Map<String, dynamic>? arguments,
+    int page = 1,
+  });
 }

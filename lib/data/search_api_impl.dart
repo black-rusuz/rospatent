@@ -99,12 +99,16 @@ class SearchApiImpl implements SearchApi {
   }
 
   @override
-  Future<SearchResponse> searchExtended({int page = 1}) async {
+  Future<SearchResponse> searchExtended(
+    String pattern, {
+    Map<String, dynamic>? arguments,
+    int page = 1,
+  }) async {
     final timer = Stopwatch()..start();
 
     final response = await client.post(
       '$url/search',
-      data: getSearchBody('pattern', page: page),
+      data: getSearchBody('pattern', arguments: arguments, page: page),
     );
     final Map<String, dynamic> data = response.data;
 
