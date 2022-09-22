@@ -24,37 +24,91 @@ class ChartsPage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         children: [
-          SizedBox(
-            height: 225,
-            child: LineChart(
-              LineChartData(lineBarsData: [
-                LineChartBarData(
-                  isCurved: true,
-                  color: const Color(0xff4af699),
-                  barWidth: 8,
-                  isStrokeCapRound: true,
-                  dotData: FlDotData(show: false),
-                  belowBarData: BarAreaData(show: false),
-                  spots: const [
-                    FlSpot(1, 1),
-                    FlSpot(3, 1.5),
-                    FlSpot(5, 1.4),
-                    FlSpot(7, 3.4),
-                    FlSpot(10, 2),
-                    FlSpot(12, 2.2),
-                    FlSpot(13, 1.8),
-                  ],
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+              boxShadow: Styles.shadows,
+            ),
+            child: Column(
+              children: [
+                const Text(
+                  'Количество патентов в год',
+                  style: Styles.bold,
                 ),
-              ]),
+                const SizedBox(height: 10),
+                SizedBox(
+                  height: 225,
+                  child: LineChart(
+                    LineChartData(lineBarsData: [
+                      LineChartBarData(
+                        barWidth: 2,
+                        color: Styles.accent,
+                        isCurved: true,
+                        isStrokeCapRound: true,
+                        dotData: FlDotData(show: true),
+                        spots: const [
+                          FlSpot(1, 1),
+                          FlSpot(3, 1.5),
+                          FlSpot(5, 1.4),
+                          FlSpot(7, 3.4),
+                          FlSpot(10, 2),
+                          FlSpot(12, 2.2),
+                          FlSpot(13, 1.8),
+                        ],
+                      ),
+                    ]),
+                  ),
+                ),
+              ],
             ),
           ),
-          SizedBox(
-            height: 375,
-            child: PieChart(
-              PieChartData(sections: [
-                PieChartSectionData(value: 80),
-                PieChartSectionData(value: 20),
-              ]),
+          const SizedBox(height: 30),
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+              boxShadow: Styles.shadows,
+            ),
+            child: Column(
+              children: [
+                RichText(
+                  text: TextSpan(
+                    text: '',
+                    children: [
+                      const TextSpan(
+                        text: 'Всего затронуто: ',
+                        style: Styles.bold,
+                      ),
+                      TextSpan(
+                        text: '5',
+                        style: Styles.bold.copyWith(color: Styles.accent),
+                      ),
+                      const TextSpan(
+                        text: ' разделов',
+                        style: Styles.normal,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+                SizedBox(
+                  height: 375,
+                  child: PieChart(
+                    PieChartData(
+                      sections: [
+                        PieChartSectionData(value: 54, color: Colors.blue),
+                        PieChartSectionData(value: 21, color: Colors.red),
+                        PieChartSectionData(value: 58, color: Colors.yellow),
+                        PieChartSectionData(value: 98, color: Colors.green),
+                        PieChartSectionData(value: 12, color: Colors.orange),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
