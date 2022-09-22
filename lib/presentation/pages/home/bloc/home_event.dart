@@ -15,3 +15,12 @@ class HomeSearch extends HomeEvent {
   @override
   List<Object?> get props => [pattern];
 }
+
+class HomeSetPage extends HomeEvent {
+  final int page;
+
+  const HomeSetPage(this.page);
+
+  @override
+  List<Object?> get props => [page];
+}

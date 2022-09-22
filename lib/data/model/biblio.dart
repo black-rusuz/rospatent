@@ -32,8 +32,10 @@ class BiblioRu extends Biblio {
     return BiblioRu(
       applicants: json['applicant_name'] ?? [],
       citations: json['citations'] ?? '',
-      inventors:
-          json['inventor'].map((e) => e['name']).whereType<String>().toList(),
+      inventors: (json['inventor'] ?? [])
+          .map((e) => e['name'])
+          .whereType<String>()
+          .toList(),
       title: json['title'] ?? '',
       patentees: (json['patentee'] ?? [])
           .map((e) => e['name'])

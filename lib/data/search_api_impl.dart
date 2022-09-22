@@ -16,6 +16,10 @@ const bool debugMode = true;
 class SearchApiImpl implements SearchApi {
   final Dio client;
 
+  SearchApiImpl({required this.client}) {
+    client.options.headers = headers;
+  }
+
   @override
   final String url = 'https://searchplatform.rospatent.gov.ru/patsearch/v0.2';
 
@@ -26,24 +30,29 @@ class SearchApiImpl implements SearchApi {
         'Content-Type': 'application/json',
       };
 
-  Map<String, String> getBody(String pattern) => {
-        'q': pattern,
-        'pre_tag': '<span>',
-        'post_tag': '</span>',
-      };
-
-  SearchApiImpl({required this.client}) {
-    client.options.headers = headers;
+  Map<String, dynamic> getBody(
+    String pattern, {
+    required int page,
+    Map<String, dynamic>? arguments,
+  }) {
+    arguments ??= {};
+    arguments.addAll({
+      'q': pattern,
+      'offset': page * 10,
+      'pre_tag': '<span>',
+      'post_tag': '</span>',
+    });
+    return arguments;
   }
 
   @override
-  Future<SearchResponse> search(String pattern) async {
+  Future<SearchResponse> search(String pattern, {int page = 1}) async {
     final timer = Stopwatch()..start();
     late final Map<String, dynamic> data;
     if (!debugMode) {
       final response = await client.post(
         '$url/search',
-        data: getBody(pattern),
+        data: getBody(pattern, page: page),
       );
       data = response.data;
       debugPrint('HTTP: ${response.statusCode}');
