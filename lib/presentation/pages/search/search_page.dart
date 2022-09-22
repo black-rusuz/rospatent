@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../providers/style.dart';
 import '../../widgets/base_button.dart';
 import '../../widgets/base_text_field.dart';
 import '../home/bloc/home_bloc.dart';
-import '../home/home_page.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -24,7 +24,7 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Styles.background,
       alignment: Alignment.center,
       child: ListView(
         children: [
@@ -60,6 +60,7 @@ class _SearchState extends State<Search> {
             controller: applicant,
             placeholder: 'Заявитель',
           ),
+          const SizedBox(height: 40),
           BaseButton(
               title: 'Найти',
               onTap: () {
