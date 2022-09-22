@@ -6,7 +6,6 @@ import '../../../data/model/drawings.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
 import '../../providers/style.dart';
-import '../../widgets/base_button.dart';
 import '../../widgets/drawings.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/texts.dart';
@@ -84,9 +83,6 @@ class _DetailSliverList extends StatelessWidget {
   String? get documentNumber =>
       int.parse(item.common.documentNumber).toString();
 
-  String get espacenet =>
-      'https://worldwide.espacenet.com/patent/search/?q=pn%3D${item.common.publishingOffice}${documentNumber ?? ''}${item.common.kind}';
-
   List<Drawing> get drawings => item.drawings;
 
   @override
@@ -108,12 +104,6 @@ class _DetailSliverList extends StatelessWidget {
               const SizedBox(height: 20),
               HeaderSummary(item: item),
               const SizedBox(height: 20),
-              BaseButton(
-                title: 'Espacenet',
-                // TODO: launch url
-                onTap: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => Text(espacenet))),
-              ),
               if (drawings.isNotEmpty) Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Drawings(data: drawings),
