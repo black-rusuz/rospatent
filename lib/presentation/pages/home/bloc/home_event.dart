@@ -24,3 +24,37 @@ class HomeSetPage extends HomeEvent {
   @override
   List<Object?> get props => [page];
 }
+
+class HomeSimilarSearch extends HomeEvent {
+  final String id;
+
+  const HomeSimilarSearch(this.id);
+
+  @override
+  List<Object?> get props => [id];
+}
+
+class HomeExtendedSearch extends HomeEvent {
+  final String number;
+  final String dateFrom;
+  final String dateTo;
+  final String author;
+  final String patentee;
+
+  const HomeExtendedSearch({
+    required this.number,
+    required this.dateFrom,
+    required this.dateTo,
+    required this.author,
+    required this.patentee,
+  });
+
+  @override
+  List<Object?> get props => [
+        number,
+        dateFrom,
+        dateTo,
+        author,
+        patentee,
+      ];
+}

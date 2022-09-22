@@ -11,8 +11,9 @@ import '../../widgets/base_text_field.dart';
 import '../../widgets/highlighted_text.dart';
 import '../../widgets/loader.dart';
 import '../../widgets/texts.dart';
+import '../charts/charts_page.dart';
 import '../detail/detail_page.dart';
-import '../extended_search/extended_search.dart';
+import '../search/search_page.dart';
 import 'bloc/home_bloc.dart';
 
 part 'widgets/results_screen.dart';
@@ -25,6 +26,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Styles.background,
+      drawer: const Search(),
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           if (state is HomeLoading) return const Loader();
