@@ -81,15 +81,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         _pattern,
         arguments: {
           'filter': {
-            'document_number': {
-              'search': event.number,
-            },
-            'authors': {
-              'values': [event.author],
-            },
-            'patent_holders ': {
-              'values': [event.patentee],
-            },
+            //'document_number': {
+            //  'search': event.number,
+            //},
+            //'authors': {
+            //  'values': [event.author],
+            //},
+            //'patent_holders ': {
+            //  'values': [event.patentee],
+            //},
             'date_published:search': {
               'range': {
                 'gte': event.dateFrom,

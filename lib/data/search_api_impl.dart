@@ -9,7 +9,7 @@ import '../domain/search_api.dart';
 import 'model/search_response.dart';
 
 // TODO: это тоже нахуй, но можно ебануть ещё один env
-const bool debugMode = true;
+const bool debugMode = !true;
 
 @Singleton(as: SearchApi)
 class SearchApiImpl implements SearchApi {
