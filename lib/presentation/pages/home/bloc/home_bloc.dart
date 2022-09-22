@@ -78,9 +78,18 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     _page = 1;
     try {
       final response = await _api.searchExtended(
-        event.number,
+        _pattern,
         arguments: {
           'filter': {
+            'document_number': {
+              'search': event.number,
+            },
+            'authors': {
+              'values': [event.author],
+            },
+            'patent_holders ': {
+              'values': [event.patentee],
+            },
             'date_published:search': {
               'range': {
                 'gte': event.dateFrom,

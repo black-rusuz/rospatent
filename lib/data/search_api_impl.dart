@@ -108,7 +108,7 @@ class SearchApiImpl implements SearchApi {
 
     final response = await client.post(
       '$url/search',
-      data: getSearchBody('pattern', arguments: arguments, page: page),
+      data: getSearchBody(pattern, arguments: arguments, page: page),
     );
     final Map<String, dynamic> data = response.data;
 

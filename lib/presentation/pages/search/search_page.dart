@@ -28,7 +28,6 @@ class _SearchState extends State<Search> {
       alignment: Alignment.center,
       child: ListView(
         children: [
-          const SearchField(),
           BaseTextField(
             margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 14),
             controller: number,
