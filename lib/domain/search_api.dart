@@ -1,3 +1,4 @@
+import '../data/model/hit.dart';
 import '../data/model/search_response.dart';
 
 abstract class SearchApi {
@@ -12,4 +13,6 @@ abstract class SearchApi {
     Map<String, dynamic>? arguments,
     int page = 1,
   });
+
+  Future<Hit> getDocument(String id);
 }

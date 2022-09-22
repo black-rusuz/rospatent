@@ -5,6 +5,8 @@ import '../../../data/model/common.dart';
 import '../../../data/model/drawings.dart';
 import '../../../data/model/hit.dart';
 import '../../../data/model/snippet.dart';
+import '../../../domain/search_api.dart';
+import '../../../injection.dart';
 import '../../providers/style.dart';
 import '../../widgets/drawings.dart';
 import '../../widgets/highlighted_text.dart';
@@ -103,19 +105,25 @@ class _DetailSliverList extends StatelessWidget {
               HeaderRow(item: item),
               const SizedBox(height: 20),
               HeaderSummary(item: item),
-              const SizedBox(height: 20),
               if (drawings.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20),
                   child: Drawings(data: drawings),
                 ),
-              const SizedBox(height: 20),
               Paragraph(header: 'Реферат', data: snippet.description),
               const SizedBox(height: 20),
               Paragraph(header: 'Формула', data: snippet.description),
               const SizedBox(height: 20),
               Paragraph(header: 'Описание', data: snippet.description),
               const SizedBox(height: 25),
+
+              // FutureBuilder<Hit>(
+              //   future: sl<SearchApi>().getDocument(item.id),
+              //   builder: (_, snapshot) {
+              //     return Text(snapshot.hasError.toString());
+              //   },
+              // ),
+
               // BaseButton(
               //   title: 'Похожие документы',
               //   // TODO: ЗА ТАКОЕ В ЧЕЧНЕ ОТРЫВАЛИ НОГИ

@@ -6,6 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
 import '../domain/search_api.dart';
+import '../utils/json_print.dart';
+import 'model/hit.dart';
 import 'model/search_response.dart';
 
 // TODO: это тоже нахуй, но можно ебануть ещё один env
@@ -20,7 +22,7 @@ class SearchApiImpl implements SearchApi {
   }
 
   @override
-  final String url = 'https://searchplatform.rospatent.gov.ru/patsearch/v0.2';
+  final String url = 'https://searchplatform.rospatent.gov.ru';
 
   final String apiKey = '7ec9e488107e4c79b140b1a9468781a7';
 
@@ -51,7 +53,7 @@ class SearchApiImpl implements SearchApi {
 
     if (!debugMode) {
       final response = await client.post(
-        '$url/search',
+        '$url/patsearch/v0.2/search',
         data: getSearchBody(pattern, page: page),
       );
       data = response.data;
@@ -88,7 +90,7 @@ class SearchApiImpl implements SearchApi {
     final timer = Stopwatch()..start();
 
     final response = await client.post(
-      '$url/similar_search',
+      '$url/patsearch/v0.2/similar_search',
       data: getSimilarBody(id, page: page),
     );
     final Map<String, dynamic> data = response.data;
@@ -107,12 +109,25 @@ class SearchApiImpl implements SearchApi {
     final timer = Stopwatch()..start();
 
     final response = await client.post(
-      '$url/search',
+      '$url/patsearch/v0.2/search',
       data: getSearchBody(pattern, arguments: arguments, page: page),
     );
     final Map<String, dynamic> data = response.data;
 
     final model = SearchResponse.fromJson(data);
+    debugPrint('LOAD TIME: ${timer.elapsed}');
+    return model;
+  }
+
+  @override
+  Future<Hit> getDocument(String id) async {
+    final timer = Stopwatch()..start();
+
+    final response = await client.post('$url/docs/$id');
+    final Map<String, dynamic> data = response.data;
+    JsonPrint(response.data);
+
+    final model = Hit.fromJson(data);
     debugPrint('LOAD TIME: ${timer.elapsed}');
     return model;
   }
